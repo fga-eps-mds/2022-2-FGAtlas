@@ -21,42 +21,58 @@ model Session {
 }
 
 model User {
-    matricula String  @id
-    email     String  @unique
-    password  String
-    isAdmin   Boolean @default(false)
-    Post      Post[]
+    matricula    String        @id
+    email        String        @unique
+    password     String
+    Student      Student?
+    coordination Coordination?
 }
 
-model Biulding {
-    name      String  @id
+model Student {
+    user          User      @relation(fields: [userMatricula], references: [matricula])
+    subjects      Subject[]
+    isAdmin       Boolean   @default(false)
+    userMatricula String    @id
+}
+
+model Coordination {
+    user          User    @relation(fields: [userMatricula], references: [matricula])
+    userMatricula String  @id
+    isAdmin       Boolean @default(true)
+    posts         Post[]
+}
+
+model Building {
+    name      String @id
     latitude  Float
     longitude Float
-    rooms     Rooms[]
+    rooms     Room[]
 }
 
-model Rooms {
+model Room {
     identification String    @id
+    level          Int
     latitude       Float
     longitude      Float
     subjects       Subject[]
-    biulding       Biulding? @relation(fields: [biuldingname], references: [name])
-    biuldingname   String?
+    building       Building? @relation(fields: [buildingname], references: [name])
+    buildingname   String?
 }
 
 model Subject {
-    codeId  String   @id
+    codeId  String    @id
     time    DateTime
     teacher String
     class   Int
-    room    Rooms?   @relation(fields: [roomID], references: [identification])
+    room    Room?     @relation(fields: [roomID], references: [identification])
     roomID  String?
+    Student Student[]
 }
 
 model Post {
-    title         String   @id
-    text          String
-    data          DateTime
-    user          User     @relation(fields: [userMatricula], references: [matricula])
-    userMatricula String
+    title                     String        @id
+    text                      String
+    data                      DateTime      @default(now())
+    coordination              Coordination? @relation(fields: [coordinationUserMatricula], references: [userMatricula])
+    coordinationUserMatricula String?
 }
