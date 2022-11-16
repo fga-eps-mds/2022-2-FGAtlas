@@ -24,7 +24,7 @@ model User {
     matricula    String        @id
     email        String        @unique
     password     String
-    Student      Student?
+    student      Student?
     coordination Coordination?
 }
 
@@ -61,12 +61,14 @@ model Room {
 
 model Subject {
     codeId  String    @id
-    time    DateTime
+    time    Int
     teacher String
     class   Int
     room    Room?     @relation(fields: [roomID], references: [identification])
     roomID  String?
     Student Student[]
+
+    @@unique([time, teacher])
 }
 
 model Post {
