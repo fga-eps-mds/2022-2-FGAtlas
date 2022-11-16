@@ -1,13 +1,12 @@
 import req from "supertest";
 import { User } from "@prisma/client";
 import { differenceInSeconds } from "date-fns";
-import { v4 as uuid } from "uuid";
 import server from "../src/server";
 import { resetDatabase } from "./utilities";
 
 describe("Login tests", () => {
   const userToRegister: User = {
-    matricula: uuid(),
+    matricula: null,
     email: "example@email.com",
     password: "password",
   };
@@ -18,7 +17,6 @@ describe("Login tests", () => {
 
   it("should register a new user and make login", async () => {
     const response = await req(server).post("/auth/register").send({
-      matricula: userToRegister.matricula,
       email: userToRegister.email,
       password: userToRegister.password,
     });
@@ -26,7 +24,7 @@ describe("Login tests", () => {
     expect(response.status).toBe(201);
 
     const loginResponse = await req(server).post("/auth/login").send({
-      matricula: userToRegister.matricula,
+      email: userToRegister.email,
       password: userToRegister.password,
     });
 

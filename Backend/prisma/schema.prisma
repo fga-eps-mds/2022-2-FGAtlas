@@ -21,8 +21,8 @@ model Session {
 }
 
 model User {
-    matricula    String        @id
-    email        String        @unique
+    matricula    String?       @unique
+    email        String        @id
     password     String
     student      Student?
     coordination Coordination?
