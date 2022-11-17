@@ -21,25 +21,31 @@ model Session {
 }
 
 model User {
-    matricula    String?       @unique
-    email        String        @id
+    id           String        @id @default(uuid())
+    email        String        @unique
     password     String
+    type         USERTYPE
     student      Student?
     coordination Coordination?
 }
 
 model Student {
-    user          User      @relation(fields: [userMatricula], references: [matricula])
-    subjects      Subject[]
-    isAdmin       Boolean   @default(false)
-    userMatricula String    @id
+    user     User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    userId   String    @id
+    isAdmin  Boolean   @default(false)
+    subjects Subject[]
 }
 
 model Coordination {
-    user          User    @relation(fields: [userMatricula], references: [matricula])
-    userMatricula String  @id
-    isAdmin       Boolean @default(true)
-    posts         Post[]
+    user    User    @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    userId  String  @id
+    isAdmin Boolean @default(true)
+    posts   Post[]
+}
+
+enum USERTYPE {
+    STUDENT
+    COORDINATION
 }
 
 model Building {
@@ -72,9 +78,9 @@ model Subject {
 }
 
 model Post {
-    title                     String        @id
-    text                      String
-    data                      DateTime      @default(now())
-    coordination              Coordination? @relation(fields: [coordinationUserMatricula], references: [userMatricula])
-    coordinationUserMatricula String?
+    title        String        @id
+    text         String
+    data         DateTime      @default(now())
+    coordination Coordination? @relation(fields: [userId], references: [userId])
+    userId       String?
 }

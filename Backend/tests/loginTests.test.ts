@@ -1,12 +1,13 @@
 import req from "supertest";
 import { User } from "@prisma/client";
 import { differenceInSeconds } from "date-fns";
+import { randomUUID } from "crypto";
 import server from "../src/server";
 import { resetDatabase } from "./utilities";
 
 describe("Login tests", () => {
   const userToRegister: User = {
-    matricula: null,
+    id: randomUUID(),
     email: "example@email.com",
     password: "password",
   };
