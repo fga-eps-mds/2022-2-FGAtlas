@@ -21,11 +21,11 @@ model Session {
 }
 
 model User {
-    id       String  @id @default(uuid())
+    id       String   @id @default(uuid())
     name     String?
-    email    String  @unique
+    email    String   @unique
     password String
-    isAdmin  Boolean @default(false)
+    isAdmin  Boolean? @default(false)
     class    Class[]
 }
 

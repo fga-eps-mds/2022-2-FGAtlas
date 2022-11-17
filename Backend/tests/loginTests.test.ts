@@ -8,6 +8,8 @@ import { resetDatabase } from "./utilities";
 describe("Login tests", () => {
   const userToRegister: User = {
     id: randomUUID(),
+    name: "example",
+    isAdmin: false,
     email: "example@email.com",
     password: "password",
   };
