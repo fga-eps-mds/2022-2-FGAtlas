@@ -23,6 +23,7 @@
     "migrate_reset_test": "dotenv -e env/.test.env prisma migrate reset -- --force --skip-generate"
   },
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.3.16",
     "@prisma/client": "^4.5.0",
     "@quixo3/prisma-session-store": "^3.1.10",
     "bcrypt": "^5.0.1",

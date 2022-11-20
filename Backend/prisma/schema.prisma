@@ -21,7 +21,50 @@ model Session {
 }
 
 model User {
-    matricula String @id
-    email     String @unique
-    password  String
+    id       String   @id @default(uuid())
+    name     String?
+    email    String   @unique
+    password String
+    isAdmin  Boolean? @default(false)
+    class    Class[]
+}
+
+model Building {
+    name      String @id
+    latitude  Float
+    longitude Float
+    rooms     Room[]
+}
+
+model Room {
+    identification String    @id
+    level          Int
+    latitude       Float
+    longitude      Float
+    building       Building? @relation(fields: [buildingname], references: [name])
+    buildingname   String?
+    class          Class[]
+}
+
+model Class {
+    Id            Int     @id
+    time          Int[]
+    day           Int[]
+    teacher       String
+    subjects      Subject @relation(fields: [subjectCodeId], references: [codeId])
+    subjectCodeId String
+    User          User[]
+    room          Room[]
+}
+
+model Subject {
+    codeId String  @id
+    Class  Class[]
+}
+
+model Post {
+    title  String   @id
+    author String
+    text   String
+    data   DateTime @default(now())
 }

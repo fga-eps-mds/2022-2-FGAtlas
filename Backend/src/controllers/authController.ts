@@ -17,16 +17,14 @@ const logout: RequestHandler = (req, res) =>
   req.logout(() => res.send("Logout efetuado com sucesso"));
 
 const register: RequestHandler = async (req, res) => {
-  const { matricula, email, password } = req.body as UserCreateDto;
+  const { email, password } = req.body as UserCreateDto;
 
   const user = await prisma.user.create({
     data: {
-      matricula,
       email,
       password,
     },
     select: {
-      matricula: true,
       email: true,
     },
   });

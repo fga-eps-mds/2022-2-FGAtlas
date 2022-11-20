@@ -3,10 +3,10 @@ import { Strategy, VerifyFunction } from "passport-local";
 import prisma from "../prismaClient";
 import { comparePassword } from "../helpers/userHelper";
 
-const authUser: VerifyFunction = async (matricula, password, next) => {
+const authUser: VerifyFunction = async (email, password, next) => {
   const user = await prisma.user.findUnique({
     where: {
-      matricula,
+      email,
     },
   });
 
@@ -17,14 +17,14 @@ const authUser: VerifyFunction = async (matricula, password, next) => {
   return next(null, user);
 };
 
-passport.use(new Strategy({ usernameField: "matricula" }, authUser));
+passport.use(new Strategy({ usernameField: "email" }, authUser));
 
-passport.serializeUser((user, next) => next(null, user.matricula));
+passport.serializeUser((user, next) => next(null, user.email));
 
-passport.deserializeUser(async (matricula, next) => {
+passport.deserializeUser(async (email, next) => {
   const user = await prisma.user.findUnique({
     where: {
-      matricula: matricula as string,
+      email: email as string,
     },
   });
 
