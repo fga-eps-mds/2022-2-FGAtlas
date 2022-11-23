@@ -10,6 +10,6 @@ routes.get("/life", controller.serverIsAlive);
 routes.get("/ready", controller.serverIsReady);
 
 routes.use("/auth", authRoute);
-routes.use("/api", apiRoute);
+routes.use("/api", isLoggedIn, apiRoute);
 
 export default routes;
