@@ -41,18 +41,20 @@ CREATE TABLE "Room" (
 
 -- CreateTable
 CREATE TABLE "Class" (
-    "Id" INTEGER NOT NULL,
+    "id" SERIAL NOT NULL,
+    "idclass" INTEGER NOT NULL,
     "time" INTEGER[],
     "day" INTEGER[],
     "teacher" TEXT NOT NULL,
     "subjectCodeId" TEXT NOT NULL,
 
-    CONSTRAINT "Class_pkey" PRIMARY KEY ("Id")
+    CONSTRAINT "Class_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Subject" (
     "codeId" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
 
     CONSTRAINT "Subject_pkey" PRIMARY KEY ("codeId")
 );
@@ -104,13 +106,13 @@ ALTER TABLE "Room" ADD CONSTRAINT "Room_buildingname_fkey" FOREIGN KEY ("buildin
 ALTER TABLE "Class" ADD CONSTRAINT "Class_subjectCodeId_fkey" FOREIGN KEY ("subjectCodeId") REFERENCES "Subject"("codeId") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "_ClassToUser" ADD CONSTRAINT "_ClassToUser_A_fkey" FOREIGN KEY ("A") REFERENCES "Class"("Id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "_ClassToUser" ADD CONSTRAINT "_ClassToUser_A_fkey" FOREIGN KEY ("A") REFERENCES "Class"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "_ClassToUser" ADD CONSTRAINT "_ClassToUser_B_fkey" FOREIGN KEY ("B") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "_ClassToRoom" ADD CONSTRAINT "_ClassToRoom_A_fkey" FOREIGN KEY ("A") REFERENCES "Class"("Id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "_ClassToRoom" ADD CONSTRAINT "_ClassToRoom_A_fkey" FOREIGN KEY ("A") REFERENCES "Class"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "_ClassToRoom" ADD CONSTRAINT "_ClassToRoom_B_fkey" FOREIGN KEY ("B") REFERENCES "Room"("identification") ON DELETE CASCADE ON UPDATE CASCADE;

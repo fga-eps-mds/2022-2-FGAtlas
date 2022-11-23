@@ -47,7 +47,8 @@ model Room {
 }
 
 model Class {
-    Id            Int     @id
+    id            Int     @id @default(autoincrement())
+    idclass       Int
     time          Int[]
     day           Int[]
     teacher       String
@@ -59,6 +60,7 @@ model Class {
 
 model Subject {
     codeId String  @id
+    name   String
     Class  Class[]
 }
 
