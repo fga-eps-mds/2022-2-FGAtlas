@@ -11,6 +11,6 @@
   "ts-node": {
     "files": true
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts", "src/repositories/scrapping.js"],
   "exclude": ["node_modules"]
 }

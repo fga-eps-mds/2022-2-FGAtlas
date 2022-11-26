@@ -3,6 +3,7 @@
   "scripts": {
     "start": "nodemon --watch \"src/\" --exec \"npm run lint:src && npx ts-node src/index.ts\" -e ts",
     "start:build": "node build/index.js",
+    "scrapping": "node src/repositories/scrapping.js",
     "test": "npm run lint:tests && npm run migrate_reset_test && npx dotenv -e env/.test.env jest tests -- --runInBand",
     "docs": "node scripts/serveDocs.js",
     "ci": "npm run lint:tests && npm run migrate_ci && npx dotenv -e env/.ci.env jest",
