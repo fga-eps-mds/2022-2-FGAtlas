@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 const { PrismaClient } = require("@prisma/client");
-const dotenv = require("dotenv");
-const morgan = require("morgan");
+const { convertTypeAcquisitionFromJson } = require("typescript");
+const { Console } = require("console");
 
 (async () => {
   const browser = await puppeteer.launch({ headless: true });
@@ -88,6 +88,9 @@ const morgan = require("morgan");
     "LDTEA SALA 3",
   ];
 
+  //const prisma = new PrismaClient();
+  //prisma.$connect();
+
   // tratar dados e joga-los no banco
   const subjects = Array.from(codigoNome).map((el) => ({
     codeId: el.split("-")[0].trim(),
@@ -97,44 +100,98 @@ const morgan = require("morgan");
   //criar materias TODO
   //const createMany = await prisma.subject.createMany({ data: subjects });
 
-  //criar matriz de matérias
+  //criar matriz de matérias DONE
   const matrizMaterias = codigoNome.map((materia) => {
     return materia.split("-")[0].trim();
   });
 
-  // criar classe
-  for (i = 0; i < turma.length; i++) {
-    //pegar professor
-    const teacher = nome[i].split("(")[0].trim();
+  // horario
+  const newHorario = horario.map((horario) => {
+    return horario.split(" ");
+  });
+  const cut = newHorario.map((sigla) => {
+    let aux = [];
+    for (i = 0; i < sigla.length; i++) {
+      let index = sigla[i].indexOf("M");
 
-    //pegar local
-    const room = [];
+      if (index == -1) {
+        index = sigla[i].indexOf("T");
+      }
+      if (index == -1) {
+        index = sigla[i].indexOf("N");
+      }
+      if (index != -1) {
+        let little = [];
+        let days = sigla[i].slice(0, index);
+        let period = sigla[i][index];
+        let hour = sigla[i].slice(index + 1);
+        little.push(days, period, hour); // dia padrao
+        aux.push(little);
+      }
+    }
+    if (aux.length > 0) {
+      return aux; // total
+    }
+  });
+  // cut = todos
+  let hour = [];
+  let day = [];
+  cut.map((conj) => {
+    let hourP = [];
+    let dayP = [];
+    conj.map((subconj) => {
+      //dias
+      let diasString = subconj[0].split("");
+      let diasInt = diasString.map((dias) => {
+        return parseInt(dias, 10);
+      });
+      dayP.push(diasInt);
+
+      //horario
+      let horariosString = subconj[2].split("");
+      let horariosInt = horariosString.map((horario) => {
+        return parseInt(horario, 10);
+      });
+      let horarios = [];
+      if (subconj[1] == "M") {
+        horarios = horariosInt.map((numero) => {
+          return numero + 7;
+        });
+      } else if (subconj[1] == "T") {
+        horarios = horariosInt.map((numero) => {
+          return numero + 12;
+        });
+      } else {
+        horarios = horariosInt.map((numero) => {
+          return numero + 17;
+        });
+      }
+      hourP.push(horarios);
+    });
+    hour.push(hourP);
+    day.push(dayP);
+  });
+  console.log(hour);
+  console.log(day);
+
+  //nome professor DONE
+  const teacher = nome.map((prof) => {
+    return prof.split("(")[0].trim();
+  });
+
+  // criar local DONE
+  const room = [];
+  for (i = 0; i < local.length; i++) {
+    const roomS = [];
     places.map((place) => {
       if (local[i].includes(place)) {
-        room.push(place);
+        roomS.push(place);
       }
     });
-    if (room.length == 2 && room[1] == "LAB NEI 2") {
-      room.shift();
+    if (roomS.length == 2 && roomS[1] == "LAB NEI 2") {
+      roomS.shift();
     }
-
-    //pegar horario
-    const newHorario = horario[i].split(" ");
-
-    const cut = [];
-    newHorario.map((sigla) => {
-      let index = sigla.indexOf("M");
-      if (index == -1) {
-        index = sigla.indexOf("T");
-      }
-      if (index == -1) {
-        index = sigla.indexOf("N");
-      }
-    });
-
-    const day = cut.map((esqueminha) => {});
-
-    console.log(newHorario);
+    room.push(roomS);
   }
 
   await browser.close();
