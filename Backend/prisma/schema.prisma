@@ -42,13 +42,13 @@ model Room {
     latitude       Float
     longitude      Float
     building       Building? @relation(fields: [buildingname], references: [name])
-    buildingname   String?
+    buildingName   String?
     class          Class[]
 }
 
 model Class {
     id            Int     @id @default(autoincrement())
-    idclass       Int
+    idClass       Int
     time          Int[]
     day           Int[]
     teacher       String
