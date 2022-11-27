@@ -15,4 +15,36 @@ const linkToUser: RequestHandler = async (req, res) => {
   return res.sendStatus(200);
 };
 
-export default { linkToUser };
+
+//LER 1
+const readOneClass: RequestHandler = async (req, res) => {
+  const { idClass } = req.params;
+
+  const _class = await prisma.class.findMany({
+    where: { idClass }
+  });
+
+  return res.json(_class);
+}
+
+//LER TODAS
+const readClasses: RequestHandler = async (req, res) => {
+
+  const classes = await prisma.class.findMany();
+
+  return res.json(classes);
+}
+
+//LER TODAS (POR SUBJECT)
+const readBySubject: RequestHandler = async (req, res) => {
+  const { subjectCodeId } = req.params;
+
+  const classes = await prisma.class.findmany({
+    where: {subjectCodeId}
+  });
+
+  return res.json(classes);
+}
+
+
+export default { linkToUser, readOneClass, readClasses, readBySubject };
