@@ -2,6 +2,7 @@ import express from "express";
 import "express-async-errors";
 import morgan from "morgan";
 import helmet from "helmet";
+import cors from "cors";
 import passport from "./services/authService";
 import sessionMiddleware from "./services/sessionService";
 import routes from "./routes";
@@ -15,6 +16,7 @@ if (NODE_ENV !== "production") {
   server.use(morgan("dev"));
 }
 
+server.use(cors());
 server.use(helmet());
 server.use(express.json());
 server.use(sessionMiddleware);

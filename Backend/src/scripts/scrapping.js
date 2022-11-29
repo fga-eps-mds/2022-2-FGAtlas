@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const { PrismaClient } = require("@prisma/client");
 
 (async () => {
   const browser = await puppeteer.launch({ headless: true });
@@ -87,10 +86,8 @@ const { PrismaClient } = require("@prisma/client");
   ];
 
   // tratar dados e joga-los no banco
-  const subjects = Array.from(codigoNome).map((el) => ({
-    codeId: el.split("-")[0].trim(),
-    name: el.split("-")[1].trim(),
-  }));
+  let codeIdArr = [];
+  const subjects = Array.from(codigoNome).map((el) => codeIdArr.push(el.split("-")[0].trim()));
 
   //criar matriz de matérias DONE
   const matrizMaterias = codigoNome.map((materia) => {
@@ -172,8 +169,36 @@ const { PrismaClient } = require("@prisma/client");
     room.push(roomS);
   }
 
-  //decidir quando avançar ou nao
-  for (h = 0; h < turma.length; h++) {}
+  let contador = 0;
+  let matrizNum = [];
+  for (h = 0; h < matrizRef.length; h++) {
+    if (matrizRef[h] == "agrupador") {
+      matrizNum.push(contador);
+      contador = 0;
+    }
+    if (matrizRef[h] == "linhaPar" || matrizRef[h] == "linhaImpar") {
+      contador += 1;
+    }
+  }
+  matrizNum.shift();
 
+  //matriz tratada
+  console.log(matrizNum);
+
+  //decidir quando avançar ou nao
+  let cont = 0;
+  let tudo = [];
+  for (let h = 0; h < turma.length; h += 1) {
+    let retorno = {
+      idclass: turma[h],
+      time: hour[h],
+      day: day[h],
+      teacher: teacher[h],
+      room: room[h],
+      subjectCodeId: codeIdArr[cont],
+    };
+    tudo.push(retorno);
+  }
+  //console.log(matrizRef);
   await browser.close();
 })();

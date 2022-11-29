@@ -1,7 +1,7 @@
 import prisma from "../prismaClient";
 import places from "./utils";
 
-const generateSubject = async (codigoNome: String[]) => {
+const generateSubject: any = async (codigoNome: String[]) => {
   const subjects = Array.from(codigoNome).map((el) => ({
     codeId: el.split("-")[0].trim(),
     name: el.split("-")[1].trim(),
@@ -17,7 +17,6 @@ const generateClass = async (
   turma: String[],
   horario: String[]
 ) => {
-
   const matrizMaterias = codigoNome.map((materia) => materia.split("-")[0].trim());
   const teacher = nome.map((prof) => prof.split("(")[0].trim());
 
@@ -87,7 +86,6 @@ const generateClass = async (
     hour.push(hourP);
     day.push(dayP);
   }
-  
 };
 
 export default { generateSubject, generateClass };
