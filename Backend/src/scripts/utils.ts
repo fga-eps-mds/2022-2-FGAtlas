@@ -22,7 +22,7 @@ const places: string[] = [
   "MOCAP",
   "ANFITEATRO",
   "S-4",
-  "S-3",
+  "I-3",
   "CONTAINER Nº 17",
   "LDTEA SALA 2",
   "LAB SS",
@@ -40,4 +40,52 @@ const places: string[] = [
   "LDTEA SALA 3",
 ];
 
-export default places;
+const levels = [
+  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 3, 1, 2, 1, 1, 1, 1, 1,
+  1, 1, 1, 1, 1, 3,
+];
+
+const pareamentoBuilding = [
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "UAC",
+  "Labs",
+  "UAC",
+  "UAC",
+  "UAC",
+  "Containers",
+  "LTDEA",
+  "Labs",
+  "UAC",
+  "Labs",
+  "Labs",
+  "Containers",
+  "Labs",
+  "Labs",
+  "Labs",
+  "Labs",
+  "Labs",
+  "Labs",
+  "UAC",
+  "LTDEA",
+];
+
+const buildings = ["UAC", "LTDEA", "RU", "Containers", "Labs"];
+export default { places, buildings, pareamentoBuilding, levels };

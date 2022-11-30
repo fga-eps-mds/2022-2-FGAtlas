@@ -36,13 +36,6 @@ const puppeteer = require("puppeteer");
     el.map((e) => e.className)
   );
 
-  //console.log(codigoNome);
-  //console.log(turma);
-  //console.log(nome);
-  //console.log(local);
-  //console.log(horario);
-  //console.log(matrizRef);
-
   const places = [
     "I1",
     "I2",
@@ -67,7 +60,7 @@ const puppeteer = require("puppeteer");
     "MOCAP",
     "ANFITEATRO",
     "S-4",
-    "S-3",
+    "I-3",
     "CONTAINER Nº 17",
     "LDTEA SALA 2",
     "LAB SS",
@@ -84,6 +77,10 @@ const puppeteer = require("puppeteer");
     "ANTE SALA",
     "LDTEA SALA 3",
   ];
+
+  let newCodigonome = codigoNome.map((codigo) => {
+    return codigo.split(" ")[0].trim();
+  });
 
   // tratar dados e joga-los no banco
   let codeIdArr = [];
@@ -168,6 +165,7 @@ const puppeteer = require("puppeteer");
     }
     room.push(roomS);
   }
+  console.log(room);
 
   let contador = 0;
   let matrizNum = [];
@@ -182,12 +180,10 @@ const puppeteer = require("puppeteer");
   }
   matrizNum.shift();
 
-  //matriz tratada
-  console.log(matrizNum);
-
   //decidir quando avançar ou nao
   let cont = 0;
   let tudo = [];
+  let helper = 0;
   for (let h = 0; h < turma.length; h += 1) {
     let retorno = {
       idclass: turma[h],
@@ -195,10 +191,16 @@ const puppeteer = require("puppeteer");
       day: day[h],
       teacher: teacher[h],
       room: room[h],
-      subjectCodeId: codeIdArr[cont],
+      subjectCodeId: codeIdArr[helper],
     };
+
+    matrizNum[helper]--;
+    if (matrizNum[helper] == 0) {
+      helper++;
+    }
+
     tudo.push(retorno);
   }
-  //console.log(matrizRef);
+
   await browser.close();
 })();
