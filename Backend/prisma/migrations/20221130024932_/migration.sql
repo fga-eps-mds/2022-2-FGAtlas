@@ -34,7 +34,7 @@ CREATE TABLE "Room" (
     "level" INTEGER NOT NULL,
     "latitude" DOUBLE PRECISION NOT NULL,
     "longitude" DOUBLE PRECISION NOT NULL,
-    "buildingname" TEXT,
+    "buildingName" TEXT,
 
     CONSTRAINT "Room_pkey" PRIMARY KEY ("identification")
 );
@@ -42,9 +42,8 @@ CREATE TABLE "Room" (
 -- CreateTable
 CREATE TABLE "Class" (
     "id" SERIAL NOT NULL,
-    "idclass" INTEGER NOT NULL,
-    "time" INTEGER[],
-    "day" INTEGER[],
+    "idClass" INTEGER NOT NULL,
+    "timeAndDay" TEXT NOT NULL,
     "teacher" TEXT NOT NULL,
     "subjectCodeId" TEXT NOT NULL,
 
@@ -100,7 +99,7 @@ CREATE UNIQUE INDEX "_ClassToRoom_AB_unique" ON "_ClassToRoom"("A", "B");
 CREATE INDEX "_ClassToRoom_B_index" ON "_ClassToRoom"("B");
 
 -- AddForeignKey
-ALTER TABLE "Room" ADD CONSTRAINT "Room_buildingname_fkey" FOREIGN KEY ("buildingname") REFERENCES "Building"("name") ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE "Room" ADD CONSTRAINT "Room_buildingName_fkey" FOREIGN KEY ("buildingName") REFERENCES "Building"("name") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Class" ADD CONSTRAINT "Class_subjectCodeId_fkey" FOREIGN KEY ("subjectCodeId") REFERENCES "Subject"("codeId") ON DELETE RESTRICT ON UPDATE CASCADE;
