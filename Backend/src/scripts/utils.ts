@@ -1,3 +1,6 @@
+// Arquivo para armazenar as constantes que não temos disponível no sigaa
+
+// Nomes das salas
 const places: string[] = [
   "I1",
   "I2",
@@ -40,11 +43,13 @@ const places: string[] = [
   "LDTEA SALA 3",
 ];
 
+// Local em que cada sala está concentrada, 1 = terreo, 2 = segundo andar, 3 = terceiro andar
 const levels = [
   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 3, 1, 2, 1, 1, 1, 1, 1,
   1, 1, 1, 1, 1, 3,
 ];
 
+// Local onde cada sala está contida
 const pareamentoBuilding = [
   "UAC",
   "UAC",
@@ -87,5 +92,7 @@ const pareamentoBuilding = [
   "LTDEA",
 ];
 
+// Lista de prédios
 const buildings = ["UAC", "LTDEA", "RU", "Containers", "Labs"];
+
 export default { places, buildings, pareamentoBuilding, levels };

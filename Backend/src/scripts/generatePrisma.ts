@@ -1,6 +1,7 @@
 import prisma from "../prismaClient";
 import places from "./utils";
 
+// Jogar dados de matérias para o banco de dados
 const generateSubject: any = async (codigoNome: String[]) => {
   const subjects = Array.from(codigoNome).map((el) => ({
     codeId: el.split("-")[0].trim(),
@@ -9,6 +10,7 @@ const generateSubject: any = async (codigoNome: String[]) => {
   await prisma.subject.createMany({ data: subjects });
 };
 
+// Jogar dados de prédios para o banco de dados
 const generateBuildings = async () => {
   const arrays = places.buildings.map((build) => ({
     name: build,
@@ -18,6 +20,7 @@ const generateBuildings = async () => {
   await prisma.building.createMany({ data: arrays });
 };
 
+// Jogar dados de salas para o banco de dados
 const generateRooms = async () => {
   const array = [];
   for (let i = 0; i < places.places.length; i += 1) {
@@ -33,6 +36,7 @@ const generateRooms = async () => {
   await prisma.room.createMany({ data: array });
 };
 
+// Jogar dados de turmas para o banco de dados, exige uma maior tratativa de dados
 const generateClass = async (
   codigoNome: String[],
   matrizRef: String[],
@@ -41,9 +45,14 @@ const generateClass = async (
   turma: String[],
   horario: String[]
 ) => {
+  // Gerar código das matérias
   const newCodigonome = codigoNome.map((codigo) => codigo.split(" ")[0].trim());
+  // Gerar professores das matérias
   const teacher = nome.map((prof) => prof.split("(")[0].trim());
 
+  // Gerar salas das matérias, aqui, temos um caso especifico, no qual
+  // se a matéria tiver dois locais, eles não podem ser em LAB NEI e LAB NEI 2
+  // então há esse tratamento de dados
   const room = [];
   for (let i = 0; i < local.length; i += 1) {
     const roomS = [];
@@ -59,6 +68,7 @@ const generateClass = async (
     room.push(roomS);
   }
 
+  // Criação de uma matriz auxiliar para parear as matérias as turmas
   let contador = 0;
   const matrizNum = [];
   for (let h = 0; h < matrizRef.length; h += 1) {
@@ -72,6 +82,7 @@ const generateClass = async (
   }
   matrizNum.shift();
 
+  // Criação do array de matérias e do array de room-subject
   const secondR = [];
   const tudo = [];
   let helper = 0;
@@ -80,7 +91,6 @@ const generateClass = async (
       idClass: parseInt(turma[h] as string, 10),
       timeAndDay: horario[h] as string,
       teacher: teacher[h],
-      // room: room[h],
       subjectCodeId: newCodigonome[helper],
     };
 
@@ -97,6 +107,7 @@ const generateClass = async (
     tudo.push(retorno);
   }
 
+  // Jogando dados no banco
   await prisma.class.createMany({ data: tudo });
 
   for (let y = 1; y < turma.length; y += 1) {
