@@ -1,4 +1,3 @@
-import { connect } from "http2";
 import prisma from "../prismaClient";
 import places from "./utils";
 
@@ -73,6 +72,7 @@ const generateClass = async (
   }
   matrizNum.shift();
 
+  const secondR = [];
   const tudo = [];
   let helper = 0;
   for (let h = 0; h < turma.length; h += 1) {
@@ -88,12 +88,30 @@ const generateClass = async (
     if (matrizNum[helper] === 0) {
       helper += 1;
     }
+    const second = {
+      idClass: parseInt(turma[h] as string, 10),
+      room: room[h],
+    };
 
+    secondR.push(second);
     tudo.push(retorno);
   }
 
   await prisma.class.createMany({ data: tudo });
-  // await prisma.class.create({data:{room:{connect:room[h]}},)
+
+  for (let y = 1; y < turma.length; y += 1) {
+    /* eslint-disable no-await-in-loop */
+    await prisma.class.update({
+      where: { id: y },
+      data: {
+        room: {
+          connect: room[y - 1].map((identification: string) => ({
+            identification,
+          })),
+        },
+      },
+    });
+  }
 };
 
 export default { generateSubject, generateClass, generateBuildings, generateRooms };
