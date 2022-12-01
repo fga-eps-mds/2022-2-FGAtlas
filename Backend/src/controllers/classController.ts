@@ -14,7 +14,6 @@ const readOneClass: RequestHandler = async (req, res) => {
 
 const readClasses: RequestHandler = async (req, res) => {
   const classes = await prisma.class.findMany();
-
   return res.json(classes);
 };
 
