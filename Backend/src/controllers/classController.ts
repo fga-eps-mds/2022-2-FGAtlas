@@ -3,16 +3,48 @@ import prisma from "../prismaClient";
 
 const linkToUser: RequestHandler = async (req, res) => {
   const { uuidUser } = req.query;
-  const { idClass } = req.query;
-  const idC = parseInt(idClass as string, 10);
+  const { idClass } = req.body;
   const idUser = uuidUser as string;
 
-  await prisma.class.update({
-    where: { id: idC },
-    data: { User: { connect: { id: idUser } } },
+  await prisma.user.update({
+    where: { id: idUser },
+    data: {
+      class: {
+        connect: idClass.map((id: number) => ({
+          id,
+        })),
+      },
+    },
   });
 
   return res.sendStatus(200);
 };
 
-export default { linkToUser };
+const readOneClass: RequestHandler = async (req, res) => {
+  const { idClass } = req.params;
+  const id = parseInt(idClass, 10);
+
+  const classOne = await prisma.class.findMany({
+    where: { id },
+  });
+
+  return res.json(classOne);
+};
+
+const readClasses: RequestHandler = async (req, res) => {
+  const classes = await prisma.class.findMany();
+
+  return res.json(classes);
+};
+
+const readBySubject: RequestHandler = async (req, res) => {
+  const { subjectCodeId } = req.params;
+
+  const classes = await prisma.class.findMany({
+    where: { subjectCodeId },
+  });
+
+  return res.json(classes);
+};
+
+export default { linkToUser, readOneClass, readClasses, readBySubject };
