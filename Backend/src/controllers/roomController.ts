@@ -1,35 +1,36 @@
 import { RequestHandler } from "express";
 import prisma from "../prismaClient";
 
-const creatRoom : RequestHandler = async (req, res) => {
-    const { identification, level, latitude, longitude } = req.body;  
-};
-
 const readRoom : RequestHandler = async (req, res) => {
-    const room = await prisma.post.findMany();
+    const room = await prisma.room.findMany();
     return res.json(room);
 };
-
 
 const readOneRoom : RequestHandler = async (req, res) => {
     const { identification } = req.params;
-    const { level } = req.params;
-    const room = await prisma.post.findMany({ where: { identification }, where: { level } });
+    const room = await prisma.room.findMany({ where: { identification } });
     return res.json(room);
 };
   
-  
-const updateRoom: RequestHandler = async (req, res) => {
-    const { identification } = req.params;
-    await prisma.post.update({ where: { identification } });
-    return res.sendStatus(200);
+const readRoomLevel : RequestHandler = async (req, res) => {
+    const { level } = req.params;
+    const room = await prisma.room.findMany({ where: { level: parseInt(level) } });
+    return res.json(room);
 };
-  
-const deleteRoom: RequestHandler = async (req, res) => {
-    const { identification } = req.params;
-    await prisma.post.deleteMany({ where: { identification } });
-    return res.sendStatus(200);
-};
-  
-  export default { creatRoom, readRoom, readOneRoom, updateRoom, deleteRoom };
+
+const readClass : RequestHandler = async (req, res) => {
+    const { id } = req.params;
+    const classes = await prisma.class.findMany({ where: { id: parseInt(id) } });
+
+    return res.json(classes);
+}
+
+const readSubject : RequestHandler = async (req, res) => {
+    const { codeId } = req.params;
+    const subjects = await prisma.subject.findMany({ where: { codeId } });
+    
+    return res.json(subjects);
+}
+
+  export default { readRoom, readOneRoom, readRoomLevel, readClass, readSubject };
   
