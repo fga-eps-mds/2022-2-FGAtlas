@@ -13,29 +13,12 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Session {
-    id        String   @id
-    sid       String   @unique
-    data      String
-    expiresAt DateTime
-}
-
-model User {
-    id       String   @id @default(uuid())
-    name     String?
-    email    String   @unique
-    password String
-    isAdmin  Boolean? @default(false)
-    class    Class[]
-}
-
 model Building {
     name      String @id
     latitude  Float
     longitude Float
     rooms     Room[]
 }
-
 model Room {
     identification String    @id
     level          Int
@@ -53,7 +36,6 @@ model Class {
     teacher       String
     subjects      Subject @relation(fields: [subjectCodeId], references: [codeId])
     subjectCodeId String
-    User          User[]
     room          Room[]
 }
 
@@ -61,11 +43,4 @@ model Subject {
     codeId String  @id
     name   String
     Class  Class[]
-}
-
-model Post {
-    title  String   @id
-    author String
-    text   String
-    data   DateTime @default(now())
 }
