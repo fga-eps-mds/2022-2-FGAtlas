@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+const Container = styled.div `
+    width: 100vw;
+`;
+
 const FirstPart = styled.div`
     width: 100vw;
     height: 100vh;
@@ -81,6 +85,7 @@ const Button = styled.div`
 `
 
 const Style = {
+    Container,
     FirstPart,
     ToolBar,
     Right,

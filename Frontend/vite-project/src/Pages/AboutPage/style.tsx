@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 const Container = styled.div `
-  height: 100vh;
+  max-width: 100vw;
+`;
+const ContainerAbout = styled.div `
+  min-height: 100vh;
   background: #171717;
   display: flex;
   flex-direction: column;
@@ -10,11 +13,10 @@ const Container = styled.div `
 
 const DevelopersContainer = styled.div `
   width: 80%;
-  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
+  margin: 40px 0;
 `;
 
 const Footer = styled.div `
@@ -39,6 +41,7 @@ const Footer = styled.div `
 
 const Style = {
   Container,
+  ContainerAbout,
   DevelopersContainer,
   Footer,
 }
