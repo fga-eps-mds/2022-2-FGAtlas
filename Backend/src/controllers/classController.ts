@@ -12,8 +12,8 @@ const readOneClass: RequestHandler = async (req, res) => {
       idClass: true,
       subjectCodeId: true,
       teacher: true,
-      timeAndDay: true,
       room: true,
+      timeAndDay: true,
     },
   });
 
@@ -44,8 +44,8 @@ const readBySubject: RequestHandler = async (req, res) => {
       idClass: true,
       subjectCodeId: true,
       teacher: true,
-      timeAndDay: true,
       room: true,
+      timeAndDay: true,
     },
   });
 
