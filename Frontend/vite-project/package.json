@@ -8,9 +8,18 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "webpack": {
+    "test": "/\\.(png|jp(e*)g|svg|gif)$/",
+    "use": "['file-loader']"
+  },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.16",
+    "@types/react-icons": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.3",
     "styled-components": "^5.3.6"
   },
