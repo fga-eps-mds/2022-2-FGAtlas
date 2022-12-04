@@ -7,13 +7,30 @@ const readOneClass: RequestHandler = async (req, res) => {
 
   const classOne = await prisma.class.findMany({
     where: { id },
+    select: {
+      id: true,
+      idClass: true,
+      subjectCodeId: true,
+      teacher: true,
+      room: true,
+      timeAndDay: true,
+    },
   });
 
   return res.json(classOne);
 };
 
 const readClasses: RequestHandler = async (req, res) => {
-  const classes = await prisma.class.findMany();
+  const classes = await prisma.class.findMany({
+    select: {
+      id: true,
+      idClass: true,
+      subjectCodeId: true,
+      teacher: true,
+      room: true,
+      timeAndDay: true,
+    },
+  });
   return res.json(classes);
 };
 
@@ -22,6 +39,14 @@ const readBySubject: RequestHandler = async (req, res) => {
 
   const classes = await prisma.class.findMany({
     where: { subjectCodeId },
+    select: {
+      id: true,
+      idClass: true,
+      subjectCodeId: true,
+      teacher: true,
+      room: true,
+      timeAndDay: true,
+    },
   });
 
   return res.json(classes);
