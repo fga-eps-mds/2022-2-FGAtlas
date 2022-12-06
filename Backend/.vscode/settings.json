@@ -35,5 +35,17 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/node_modules": true
-  }
+  },
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Scrap",
+      "database": "FGAtlas_dev",
+      "username": "postgres",
+      "password": "password"
+    }
+  ]
 }

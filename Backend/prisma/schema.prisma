@@ -13,35 +13,18 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Session {
-    id        String   @id
-    sid       String   @unique
-    data      String
-    expiresAt DateTime
-}
-
-model User {
-    id       String   @id @default(uuid())
-    name     String?
-    email    String   @unique
-    password String
-    isAdmin  Boolean? @default(false)
-    class    Class[]
-}
-
 model Building {
     name      String @id
     latitude  Float
     longitude Float
     rooms     Room[]
 }
-
 model Room {
     identification String    @id
     level          Int
     latitude       Float
     longitude      Float
-    building       Building? @relation(fields: [buildingname], references: [name])
+    building       Building? @relation(fields: [buildingName], references: [name])
     buildingName   String?
     class          Class[]
 }
@@ -49,12 +32,10 @@ model Room {
 model Class {
     id            Int     @id @default(autoincrement())
     idClass       Int
-    time          Int[]
-    day           Int[]
+    timeAndDay    String
     teacher       String
     subjects      Subject @relation(fields: [subjectCodeId], references: [codeId])
     subjectCodeId String
-    User          User[]
     room          Room[]
 }
 
@@ -62,11 +43,4 @@ model Subject {
     codeId String  @id
     name   String
     Class  Class[]
-}
-
-model Post {
-    title  String   @id
-    author String
-    text   String
-    data   DateTime @default(now())
 }

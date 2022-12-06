@@ -1,16 +1,16 @@
 import { Router } from "express";
+import buildingRoute from "./buildingRoute";
 import classRoute from "./classRoute";
-import postRoute from "./postRoute";
+import roomRoute from "./roomRoute";
 import subjectRoute from "./subjectRoute";
-import userRoute from "./userRoute";
 
 const routes = Router();
 
 routes.get("/", (req, res) => res.send(`Welcome to the API`));
 
-routes.use("/post", postRoute);
 routes.use("/subject", subjectRoute);
-routes.use("/user", userRoute);
 routes.use("/class", classRoute);
+routes.use("/building", buildingRoute);
+routes.use("/rooms", roomRoute);
 
 export default routes;
