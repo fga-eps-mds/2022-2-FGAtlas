@@ -1,38 +1,85 @@
-const parseDay = async (days: string[]) => {
-  const day = [];
+// Funcao responsável por transformar a string em um array de dias
+// ela recebe o código e devolve tal.
+const parseDay = (horario: string) => {
+  const newHorario = horario.split(" ");
+  const cut = newHorario.map((sigla: string) => {
+    const aux = [];
 
-  for (let k = 0; k < days.length; k += 1) {
-    const dayP = [];
-    for (let l = 0; l < days[k].length; l += 1) {
-      const diasString = days[k][l][0].split("");
-      const diasInt = diasString.map((dias) => parseInt(dias, 10));
-      dayP.push(diasInt);
+    let index = sigla.indexOf("M");
+
+    if (index === -1) {
+      index = sigla.indexOf("T");
     }
-    day.push(dayP);
+    if (index === -1) {
+      index = sigla.indexOf("N");
+    }
+    if (index !== -1) {
+      const little = [];
+      const days = sigla.slice(0, index);
+      const period = sigla[index];
+      const hour = sigla.slice(index + 1);
+      little.push(days, period, hour); // dia padrao
+      aux.push(little);
+    }
+
+    return aux; // total
+  });
+
+  const day = [];
+  for (let k = 0; k < cut.length; k += 1) {
+    for (let l = 0; l < cut[k].length; l += 1) {
+      const diasString = cut[k][l][0].split("");
+      const diasInt = diasString.map((dias) => parseInt(dias, 10));
+      day.push(diasInt);
+    }
   }
   return day;
 };
-const parseHour = async (hours: string[]) => {
-  const hour = [];
 
-  for (let k = 0; k < hours.length; k += 1) {
-    const hourP = [];
-    for (let l = 0; l < hours[k].length; l += 1) {
+// Funcao responsável por transformar a string em um array de horas da matéria
+// ela recebe o código e devolve tal.
+const parseHour = (horario: string) => {
+  const newHorario = horario.split(" ");
+  const cut = newHorario.map((sigla: string) => {
+    const aux = [];
+    let index = sigla.indexOf("M");
+
+    if (index === -1) {
+      index = sigla.indexOf("T");
+    }
+    if (index === -1) {
+      index = sigla.indexOf("N");
+    }
+    if (index !== -1) {
+      const little = [];
+      const days = sigla.slice(0, index);
+      const period = sigla[index];
+      const hour = sigla.slice(index + 1);
+      little.push(days, period, hour); // dia padrao
+      aux.push(little);
+    }
+
+    return aux; // total
+  });
+
+  const hour = [];
+  for (let k = 0; k < cut.length; k += 1) {
+    for (let l = 0; l < cut[k].length; l += 1) {
       // horario
-      const horariosString = hours[k][l][2].split("");
+      const horariosString = cut[k][l][2].split("");
       const horariosInt = horariosString.map((horarioV) => parseInt(horarioV, 10));
       let horarios = [];
-      if (hours[k][l][1] === "M") {
+      if (cut[k][l][1] === "M") {
         horarios = horariosInt.map((numero) => numero + 7);
-      } else if (hours[k][l][1] === "T") {
+      } else if (cut[k][l][1] === "T") {
         horarios = horariosInt.map((numero) => numero + 12);
       } else {
         horarios = horariosInt.map((numero) => numero + 17);
       }
-      hourP.push(horarios);
+      hour.push(horarios);
     }
-    hour.push(hourP);
   }
+
   return hour;
 };
 
