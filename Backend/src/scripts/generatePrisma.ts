@@ -12,11 +12,17 @@ const generateSubject: any = async (codigoNome: String[]) => {
 
 // Jogar dados de prédios para o banco de dados
 const generateBuildings = async () => {
-  const arrays = places.buildings.map((build) => ({
-    name: build,
-    latitude: 0,
-    longitude: 0,
-  }));
+  const arrays: any[] = [];
+
+  for (let i = 0; i < places.buildings.length; i += 1) {
+    const build = {
+      name: places.buildings[i],
+      latitude: places.latBuildings[i],
+      longitude: places.longBuildings[i],
+    };
+    arrays.push(build);
+  }
+
   await prisma.building.createMany({ data: arrays });
 };
 

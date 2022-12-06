@@ -49,6 +49,10 @@ const levels = [
   1, 1, 1, 1, 1, 3,
 ];
 
+const latRooms = [];
+
+const logRooms = [];
+
 // Local onde cada sala está contida
 const pareamentoBuilding = [
   "UAC",
@@ -95,4 +99,12 @@ const pareamentoBuilding = [
 // Lista de prédios
 const buildings = ["UAC", "LTDEA", "RU", "Containers", "Labs"];
 
-export default { places, buildings, pareamentoBuilding, levels };
+const latBuildings = [
+  -15.989085482691276, -15.990508287834954, -15.98956996870734, -15.99057040065923,
+  -15.98966889298044,
+];
+const longBuildings = [
+  -48.04476934064168, -48.04424886724141, -48.044200587479295, -48.04454659244202,
+  -48.04545215471333,
+];
+export default { places, buildings, pareamentoBuilding, levels, latBuildings, longBuildings };
