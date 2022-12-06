@@ -7,6 +7,7 @@ import { TfiEmail, TfiGithub } from "react-icons/tfi";
 import { ThemeProvider, Typography } from "@mui/material";
 import DevelopersInfo from "../../Components/DevelopersInfo";
 import muiStyle from "./muiStyles";
+import arrayImagesDevelopers from "./arrayImagesDevelopers";
 
 const styles = {
   button: {
@@ -54,22 +55,19 @@ export default function HomePage() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores similique nam dolore, reiciendis ut, repellendus itaque iste veniam non vitae laborum voluptate quaerat quae nulla id quia quo a tempore.
             </Typography>
             <Style.DevelopersContainer>
-                <DevelopersInfo></DevelopersInfo>
-                <DevelopersInfo></DevelopersInfo>
-                <DevelopersInfo></DevelopersInfo>
-                <DevelopersInfo></DevelopersInfo>
-                <DevelopersInfo></DevelopersInfo>
-                <DevelopersInfo></DevelopersInfo>
-                <DevelopersInfo></DevelopersInfo>
+                {arrayImagesDevelopers.map((image:any, index:number) => 
+                  <DevelopersInfo image={image}></DevelopersInfo>
+                )}
             </Style.DevelopersContainer>
             </Style.ContainerAbout>
-            <Style.Footer>
+            
+        </Style.Container>
+        <Style.Footer>
                 <div>
                     <h1><TfiEmail/><span/> fgatlas@gmail.com</h1>
                     <h1><TfiGithub /><span/>fga-eps/2022-2-Squad04</h1>
                 </div>
             </Style.Footer> 
-        </Style.Container>
         </>
     )
 }

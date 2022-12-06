@@ -13,10 +13,13 @@ const Container = styled.div `
 `;
 
 
-const Image = styled.img <ImageProps>`
+const Image = styled.div <ImageProps>`
   border-radius: 50%;
-  width: 50%;
-  background-image: ${(props:any) => `url("${props.img}");`};
+  width: 200px;
+  height: 200px;
+  background: ${(props:any) => `url(${props.img})  no-repeat`} ;
+  background-size: cover;
+  background-position: center;
 `;
 
 const Styles = {

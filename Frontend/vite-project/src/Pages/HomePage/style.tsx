@@ -74,6 +74,9 @@ const Right = styled.div`
     div {
         width: 50%;
         background-color: red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     p {
@@ -96,8 +99,8 @@ const Container = styled.div `
     box-shadow: 10px;
 `;
 const ContainerAbout = styled.div `
-      width: 100%;
-    height: 800px;
+    width: 100%;
+    min-height: 800px;
     background: #171717;
     display: flex;
     flex-direction: column;
@@ -117,10 +120,10 @@ const DevelopersContainer = styled.div `
 const Footer = styled.div `
     background-color: #2D2D2D;
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     position: relative;
-    z-index: -1;
-    top: 800px;
+    z-index: 4;
+    top: 1103px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
