@@ -8,6 +8,13 @@ const style = {
     marginTop: '80px',
     fontSize: '18px',
     fontFamily: 'Outfit',
+  },
+
+  button: {
+    width: '200px',
+    color: '#ffffff',
+    padding: '10px 25px 10px 25px',
+    marginLeft: '150px'
   }
 }
 

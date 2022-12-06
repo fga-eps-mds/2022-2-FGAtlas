@@ -1,3 +1,5 @@
+//Colocar link nos botões
+
 import Style from "./style"
 import Logo from './../../Images/Logo.png'
 import Button from '@mui/material/Button';
@@ -8,13 +10,6 @@ import { ThemeProvider, Typography } from "@mui/material";
 import DevelopersInfo from "../../Components/DevelopersInfo";
 import muiStyle from "./muiStyles";
 import arrayImagesDevelopers from "./arrayImagesDevelopers";
-
-const styles = {
-  button: {
-    color: '#ffffff',
-    padding: 'opx 15px 10px 15px',
-  }
-};
 
 export default function HomePage() {
     return (
@@ -29,9 +24,7 @@ export default function HomePage() {
                     </div>
                 </Style.ToolBar>
                 <Style.Left>
-                    <div className="image">
-                            
-                    </div>
+                    <div className="image"></div>
                 </Style.Left>
                 <Style.Right>
                     <div>
@@ -43,7 +36,7 @@ export default function HomePage() {
 
                         <ThemeProvider theme={buttonTheme}>
                             <Stack direction="row" spacing={2}>
-                                <Button variant="contained" sx={styles.button}>Encontrar sala</Button>
+                                <Button variant="contained" sx={muiStyle.style.button}>Encontrar sala</Button>
                             </Stack>
                         </ThemeProvider>
                     </div>

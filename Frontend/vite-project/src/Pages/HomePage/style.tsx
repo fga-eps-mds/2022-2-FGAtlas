@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import fga from '../../Images/fga.jpg'
 
 const FirstPart = styled.div`
     width: 100%;
@@ -55,8 +56,8 @@ const Left = styled.div`
         left: 50%;
         top: 18%;
         z-index: 2;
+        background: url(${fga})  no-repeat ;
         background-position: center;
-        background-image: url('../../Images/fga.jpg');
 
     }
 `
@@ -67,16 +68,17 @@ const Right = styled.div`
     position: absolute;
     right: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     flex-direction: column;
 
     div {
         width: 50%;
-        background-color: red;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-right: 150px;
+
     }
 
     p {
@@ -89,9 +91,6 @@ const Right = styled.div`
     }
 
     
-`
-const Button = styled.div`
-
 `
 
 const Container = styled.div `
@@ -106,7 +105,7 @@ const ContainerAbout = styled.div `
     flex-direction: column;
     align-items: center;
     position: absolute;
-    box-shadow: 0px 10px 30px 20px black;
+    box-shadow: 0px 10px 40px 20px black;
 `
 
 const DevelopersContainer = styled.div `
@@ -122,7 +121,7 @@ const Footer = styled.div `
     width: 100%;
     min-height: 200px;
     position: relative;
-    z-index: 4;
+    z-index: -1;
     top: 1103px;
     display: flex;
     align-items: center;
@@ -154,7 +153,6 @@ const Style = {
     ToolBar,
     Left,
     Right,
-    Button,
     ContainerAbout,
     DevelopersContainer,
     Footer
