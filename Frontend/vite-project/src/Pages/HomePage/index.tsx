@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import buttonTheme from "./themes";
 import { TfiEmail, TfiGithub } from "react-icons/tfi";
-import { ThemeProvider, Typography } from "@mui/material";
+import { Link, ThemeProvider, Typography } from "@mui/material";
 import DevelopersInfo from "../../Components/DevelopersInfo";
 import muiStyle from "./muiStyles";
 import arrayImagesDevelopers from "./arrayImagesDevelopers";
