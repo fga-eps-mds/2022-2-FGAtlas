@@ -61,8 +61,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas a FGA
 
 Tecnologias utilizadas neste repositório:
 
-* [![React][React.js]][React-url]
-* [![React][React.js]][React-url]
+[![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,node,typescript,vite,docker)]
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
@@ -143,6 +142,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/LICENSE
 [product-screenshot]: images/screenshot.png
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
 
