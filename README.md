@@ -54,7 +54,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas a FGA
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
-### Tecnologias
+## Tecnologias
 
 Tecnologias utilizadas neste repositório:
 
@@ -65,7 +65,55 @@ Tecnologias utilizadas neste repositório:
 
 ## Desenvolvedores
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<center>
+
+<table style="margin-left: auto; margin-right: auto;">
+    <tr>
+        <td align="center">
+            <a href="https://github.com/ccarlaa">
+                <img style="border-radius: 50%;" src="https://github.com/ccarlaa.png" width="150px;"/>
+                <h5 class="text-center">Carla Clementino</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/deboracaires">
+                <img style="border-radius: 50%;" src="https://github.com/deboracaires.png" width="150px;"/>
+                <h5 class="text-center">Debora Caires</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/bot-do-jao">
+                <img style="border-radius: 50%;" src="https://github.com/bot-do-jao.png" width="150px;"/>
+                <h5 class="text-center">João Pedro</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/kaua-pt">
+                <img style="border-radius: 50%;" src="https://github.com/kaua-pt.png" width="150px;"/>
+                <h5 class="text-center">Kauã Vinícius</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/Lizdtre">
+                <img style="border-radius: 50%;" src="https://github.com/Lizdtre.png" width="150px;"/>
+                <h5 class="text-center">Paulo Renato</h5>
+            </a>
+        </td>
+         <td align="center">
+            <a href="https://github.com/StrangeUnit28">
+                <img style="border-radius: 50%;" src="https://github.com/StrangeUnit28.png" width="150px;"/>
+                <h5 class="text-center">Rafael Brito</h5>
+            </a>
+        </td>
+	<td align="center">
+            <a href="https://github.com/sabrinaberno">
+                <img style="border-radius: 50%;" src="https://github.com/sabrinaberno.png" width="150px;"/>
+                <h5 class="text-center">Sabrina Berno</h5>
+            </a>
+        </td>
+</table>
+
+</center>
 
 <!-- GETTING STARTED -->
 ## Como rodar
