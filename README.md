@@ -1,12 +1,12 @@
 # 2022-2-Squad04 - FGAtlas
 
 <a name="readme-top"></a>
-<center>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-</center>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -58,7 +58,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas a FGA
 
 Tecnologias utilizadas neste repositório:
 
-<center>![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github)</center>
+![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github)
 
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
@@ -101,7 +101,6 @@ npm run dev
 ```
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
-<!-- ROADMAP -->
 ## Backlog do produto
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
