@@ -27,8 +27,8 @@ const readClasses: RequestHandler = async (req, res) => {
       idClass: true,
       subjectCodeId: true,
       teacher: true,
-      timeAndDay: true,
       room: true,
+      timeAndDay: true,
     },
   });
   return res.json(classes);
