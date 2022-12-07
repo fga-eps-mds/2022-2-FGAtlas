@@ -59,7 +59,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas a FGA
 
 ### Tecnologias
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Tecnologias utilizadas neste repositório:
 
 * [![React][React.js]][React-url]
 * [![React][React.js]][React-url]
@@ -67,8 +67,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 ## Desenvolvedores
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -101,10 +99,9 @@ npm run scrap
 npm run start
 ```
 
-<br><\br>
 Para executar o frontend:
-1-	Vá para a pasta do vite
-2-	Execute no terminal:
+1. Vá para a pasta do vite
+2. Execute no terminal:
 
 ```
 npm run dev
@@ -116,8 +113,6 @@ npm run dev
 
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Como contribuir 
@@ -137,7 +132,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]:https://github.com/fga-eps-mds/2022-2-FGAtlas/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
