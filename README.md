@@ -1,12 +1,12 @@
 # 2022-2-Squad04 - FGAtlas
 
 <a name="readme-top"></a>
-
+<center>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-
+</center>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -37,9 +37,9 @@
         <li><a href="#Tecnologias">Tecnologias</a></li>
       </ul>
     </li>
-    <li><a href="#Devenvolvedores">Desenvolvedores</a></li>
     <li><a href="#Como-rodar">Como rodar</a></li>
     <li><a href="#Backlog-do-produto">Backlog do produto</a></li>
+    <li><a href="#Devenvolvedores">Desenvolvedores</a></li>
     <li><a href="#Como-contribuir">Como contribuir</a></li>
     <li><a href="#licença">Licença</a></li>
   </ol>
@@ -58,15 +58,57 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas a FGA
 
 Tecnologias utilizadas neste repositório:
 
-![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github)
+<center>![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github)</center>
 
+
+<p align="right">(<a href="#readme-top">Voltar</a>)</p>
+
+<!-- GETTING STARTED -->
+## Como rodar
+Para executar o backend:
+1.	Instale o node 
+
+2.	Instale o docker 
+
+3.	Clone o repositório
+	
+4.	Crie o container no docker para a aplicação
+	
+5.	Execute no terminal: 
+
+```
+npm run migrate_dev
+```
+
+6.	Execute no terminal: 
+
+```
+npm run scrap
+```
+
+7.	Execute no terminal: 
+
+```
+npm run start
+```
+
+Para executar o frontend:
+1. Vá para a pasta do vite
+2. Execute no terminal:
+
+```
+npm run dev
+```
+<p align="right">(<a href="#readme-top">Voltar</a>)</p>
+
+<!-- ROADMAP -->
+## Backlog do produto
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 ## Desenvolvedores
 
 <center>
-
 <table style="margin-left: auto; margin-right: auto;">
     <tr>
         <td align="center">
@@ -114,50 +156,8 @@ Tecnologias utilizadas neste repositório:
 </table>
 
 </center>
-
-<!-- GETTING STARTED -->
-## Como rodar
-Para executar o backend:
-1.	Instale o node 
-
-2.	Instale o docker 
-
-3.	Clone o repositório
-	
-4.	Crie o container no docker para a aplicação
-	
-5.	Execute no terminal: 
-
-```
-npm run migrate_dev
-```
-
-6.	Execute no terminal: 
-
-```
-npm run scrap
-```
-
-7.	Execute no terminal: 
-
-```
-npm run start
-```
-
-Para executar o frontend:
-1. Vá para a pasta do vite
-2. Execute no terminal:
-
-```
-npm run dev
-```
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
-<!-- ROADMAP -->
-## Backlog do produto
-
-
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Como contribuir 
