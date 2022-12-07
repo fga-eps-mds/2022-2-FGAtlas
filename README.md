@@ -2,13 +2,12 @@
 
 <a name="readme-top"></a>
 
-
+<div align="center">
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-
-
+</div>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -61,7 +60,10 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas a FGA
 
 Tecnologias utilizadas neste repositório:
 
-[![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,node,typescript,vite,docker)]
+<div align="center">
+![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github)
+</div>
+
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
