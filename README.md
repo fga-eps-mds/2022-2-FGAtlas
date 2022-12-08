@@ -66,7 +66,7 @@ Tecnologias utilizadas neste repositório:
 <!-- GETTING STARTED -->
 ## Como rodar
 Para executar o backend:
-1.	Instale o node 
+1.	Instale o node.js 
 
 2.	Instale o docker 
 
