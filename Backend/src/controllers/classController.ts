@@ -1,5 +1,8 @@
 import { RequestHandler } from "express";
 import prisma from "../prismaClient";
+import hourAndDay from "../services/generateHourAndDay";
+
+
 
 const readOneClass: RequestHandler = async (req, res) => {
   const { idClass } = req.params;
@@ -17,8 +20,13 @@ const readOneClass: RequestHandler = async (req, res) => {
     },
   });
 
+  classOne.day = hourAndDay.parseDay(classOne.timeAndDay);
+  classOne.time = hourAndDay.parseHour(classOne.timeAndDay);
+
   return res.json(classOne);
 };
+
+
 
 const readClasses: RequestHandler = async (req, res) => {
   const classes = await prisma.class.findMany({
@@ -31,8 +39,14 @@ const readClasses: RequestHandler = async (req, res) => {
       timeAndDay: true,
     },
   });
+
+  classes.day = hourAndDay.parseDay(classes.timeAndDay);
+  classes.time = hourAndDay.parseHour(classes.timeAndDay);
+
   return res.json(classes);
 };
+
+
 
 const readBySubject: RequestHandler = async (req, res) => {
   const { subjectCodeId } = req.params;
@@ -48,6 +62,9 @@ const readBySubject: RequestHandler = async (req, res) => {
       timeAndDay: true,
     },
   });
+
+  classes.day = hourAndDay.parseDay(classes.timeAndDay);
+  classes.time = hourAndDay.parseHour(classes.timeAndDay);
 
   return res.json(classes);
 };
