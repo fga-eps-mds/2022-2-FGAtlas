@@ -58,7 +58,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas da FG
 
 Tecnologias utilizadas neste repositório:
 
-![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github)
+![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github,prisma)
 
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
