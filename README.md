@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com">
     <img src="Docs/FGAtlasLogo-01.jpg" alt="Logo" width="550" height="430">
   </a>
 
@@ -60,9 +60,6 @@ Tecnologias utilizadas neste repositório:
 
 ![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github,prisma)
 
-
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
-
 <!-- GETTING STARTED -->
 ## Como rodar
 Para executar o backend:
@@ -99,11 +96,9 @@ Para executar o frontend:
 ```
 npm run dev
 ```
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 ## Backlog do produto
 
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 ## Desenvolvedores
 
@@ -155,14 +150,10 @@ npm run dev
 </table>
 
 </center>
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 
 <!-- CONTRIBUTING -->
 ## Como contribuir 
-
-
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 
 
@@ -170,8 +161,6 @@ npm run dev
 ## Licença
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
 
 
