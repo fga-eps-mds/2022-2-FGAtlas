@@ -176,7 +176,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/fga-eps-mds/2022-2-FGAtlas.svg?style=for-the-badge
 [contributors-url]:https://github.com/fga-eps-mds/2022-2-FGAtlas/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/fga-eps-mds/2022-2-FGAtlas/network/members
