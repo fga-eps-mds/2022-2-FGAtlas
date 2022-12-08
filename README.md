@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Docs/FGAtlasLogo-01.jpg" alt="Logo" width="500" height="500">
+    <img src="Docs/FGAtlasLogo-01.jpg" alt="Logo" width="900" height="600">
   </a>
 
   <h3 align="center">FGAtlas</h3>
