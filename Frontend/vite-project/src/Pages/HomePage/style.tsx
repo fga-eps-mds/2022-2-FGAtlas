@@ -122,7 +122,7 @@ const Footer = styled.div `
     min-height: 200px;
     position: relative;
     z-index: -1;
-    top: 1103px;
+    top: 1080px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
