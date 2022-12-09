@@ -10,6 +10,6 @@ routes.get("/life", controller.serverIsAlive);
 routes.get("/ready", controller.serverIsReady);
 
 routes.use("/api", apiRoute);
-routes.use("/documents", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+routes.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 export default routes;

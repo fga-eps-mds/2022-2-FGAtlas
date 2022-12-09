@@ -1,13 +1,131 @@
 {
-    "openapi":"3.0.0",
-    "info":{
-        "title":"FGAtlas-API-Docs",
-        "description":"API com objetivo de abastecer a aplicação FGAtlas",
-        "contacts":"kauaponte@hotmail.com",
-        "version":"1.0.0"
+  "openapi": "3.0.0",
+  "info": {
+    "title": "FGAtlas-API-Docs",
+    "description": "API com objetivo de abastecer a aplicação FGAtlas",
+    "contacts": "kauaponte@hotmail.com",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/subject": {
+      "get": {
+        "summary": "Pegar todas as matérias",
+        "description": "Rota responsável por pegar todas as matérias do banco de dados",
+        "tags": ["subject"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Subject"
+              },
+              "examples": {
+                "Subject": {
+                  "value": {
+                    "codeId": "FGA0003",
+                    "name": "Compiladores",
+                    "class": 1
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a subject"
+                }
+              }
+            }
+          }
+        }
+      }
     },
-    "servers":{
-        "url":"http://localhost:8080",
-        "description":"API de teste"
+    "/class": {},
+    "/building": {},
+    "/rooms": {}
+  },
+  "components": {
+    "schemas": {
+      "Subject": {
+        "type": "object",
+        "properties": {
+          "codeId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "Class": {
+            "type": "Class"
+          }
+        }
+      },
+      "Building": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "rooms": {
+            "type": "Room"
+          }
+        }
+      },
+      "Room": {
+        "type": "object",
+        "properties": {
+          "identification": {
+            "type": "string"
+          },
+          "level": {
+            "type": "number"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "building": {
+            "type": "Building"
+          },
+          "buildingName": {
+            "type": "string"
+          },
+          "class": {
+            "type": "Class"
+          }
+        }
+      },
+      "Class": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "idClass": {
+            "type": "number"
+          },
+          "timeAndDay": {
+            "type": "string"
+          },
+          "teacher": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "Subject"
+          },
+          "subjectCodeId": {
+            "type": "string"
+          },
+          "room": {
+            "type": "Room"
+          }
+        }
+      }
     }
+  }
 }
