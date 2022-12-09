@@ -31,6 +31,7 @@ const readClasses: RequestHandler = async (req, res) => {
       timeAndDay: true,
     },
   });
+
   return res.json(classes);
 };
 
