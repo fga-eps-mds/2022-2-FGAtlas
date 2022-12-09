@@ -51,22 +51,24 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Sobre o projeto
+## :earth_americas: Sobre o projeto
 
 FGAtlas é um projeto web que fornece a localização dos prédios e salas da FGA, a fim de auxiliar calouros e veteranos a encontrarem os locais onde terão suas aulas. A ideia surgiu após a equipe realizar, em grupos da faculdade, uma pesquisa via forms na qual questionava os estudantes qual era a maior dificuldade dos mesmos no campus, a grande parte das respostas foram direcionadas à questões envolvendo localização. 
 
 <p align="right">(<a href="#readme-top">Voltar</a>)</p>
 
-## Tecnologias
+## :hammer: Tecnologias
 
-Tecnologias utilizadas neste repositório:
+Tecnologias utilizadas neste repositório: 
 
 ![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,git,github,prisma)
 
 <!-- GETTING STARTED -->
-## Pré-requisitos
+## :exclamation: Pré-requisitos
 
-## Como rodar
+Antes de começar, você precisa ter instalado as seguintes ferramentas: Postgres14, NodeJs e git.
+
+## :chart_with_upwards_trend: Como rodar
 
 Para executar o backend:
 1.	Clone o repositório
@@ -119,10 +121,10 @@ npm install
 npm run tests
 ```
 
-## Backlog do produto
+## :orange_book: Backlog do produto
 
 
-## Desenvolvedores
+## :smile: Desenvolvedores
 
 <center>
 <table style="margin-left: auto; margin-right: auto;">
@@ -175,12 +177,12 @@ npm run tests
 
 
 <!-- CONTRIBUTING -->
-## Como contribuir 
+## :question: Como contribuir 
 
 
 
 <!-- LICENSE -->
-## Licença
+## :dash: Licença
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
