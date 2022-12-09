@@ -39,6 +39,7 @@
         <li><a href="#Tecnologias">Tecnologias</a></li>
       </ul>
     </li>
+    <li><a href="#Pré-requisitos">Pre-Requisitos</a></li>
     <li><a href="#Como-rodar">Como rodar</a></li>
     <li><a href="#Backlog-do-produto">Backlog do produto</a></li>
     <li><a href="#Devenvolvedores">Desenvolvedores</a></li>
@@ -60,43 +61,62 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas da FG
 
 Tecnologias utilizadas neste repositório:
 
-![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,docker,git,github,prisma)
+![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,git,github,prisma)
 
 <!-- GETTING STARTED -->
+## Pré-requisitos
+
 ## Como rodar
+
 Para executar o backend:
-1.	Instale o node.js 
-
-2.	Instale o docker 
-
-3.	Clone o repositório
+1.	Clone o repositório
 	
-4.	Crie o container no docker para a aplicação
+2. 	Inicie o Postgres com o nome do banco de desenvolvimento
+
+3. 	Instale todas as dependências do repositório com:
+```
+npm install
+```
 	
-5.	Execute no terminal: 
+4.	Faça as migrations do banco de dados com: 
 
 ```
 npm run migrate_dev
 ```
 
-6.	Execute no terminal: 
-
-```
-npm run scrap
-```
-
-7.	Execute no terminal: 
+5.	Inicie a aplicação com, isto já garante que o banco de dados estará populado:
 
 ```
 npm run start
 ```
 
 Para executar o frontend:
-1. Vá para a pasta do vite
-2. Execute no terminal:
+1. Clone o repositório
+
+2. Vá para a pasta do vite
+
+3. Instale todas as dependências com:
+```
+npm install
+```
+
+4. Execute no terminal:
 
 ```
 npm run dev
+```
+
+Para executar os testes do backend:
+1. 	Clone o repositório
+2. 	Inicie o Postgres com o nome do banco de desenvolvimento
+
+3. 	Instale todas as dependências do repositório com:
+```
+npm install
+```
+4. 	Inicie os testes com:
+```
+npm run tests
 ```
 
 ## Backlog do produto
