@@ -1,9 +1,11 @@
 {
   "name": "FGAtlas",
+  "prisma": {
+    "seed": "dotenv -e env/.dev.env npx ts-node src/scripts/scrapping.ts"
+  },
   "scripts": {
-    "start": " nodemon --watch \"src/\" --exec \"npm run lint:src && npx ts-node src/index.ts\" -e ts ",
+    "start": "npx prisma generate && nodemon --watch \"src/\" --exec \"npm run lint:src && npx ts-node src/index.ts\" -e ts",
     "start:build": "node build/index.js",
-    "scrap": "dotenv -e env/.dev.env npx ts-node src/scripts/scrapping.ts",
     "test": "npm run lint:tests && npm run migrate_reset_test && npx dotenv -e env/.test.env jest tests -- --runInBand",
     "docs": "node scripts/serveDocs.js",
     "ci": "npm run lint:tests && npm run migrate_ci && npx dotenv -e env/.ci.env jest",
@@ -46,6 +48,7 @@
     "prisma": "^4.4.0",
     "prisma-docs-generator": "^0.5.0",
     "puppeteer": "^19.3.0",
+    "swagger-ui-express": "^4.6.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -61,6 +64,7 @@
     "@types/passport": "^1.0.11",
     "@types/passport-local": "^1.0.34",
     "@types/supertest": "^2.0.12",
+    "@types/swagger-ui-express": "^4.1.3",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",

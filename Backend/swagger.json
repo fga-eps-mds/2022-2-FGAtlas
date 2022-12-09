@@ -1,0 +1,13 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "title":"FGAtlas-API-Docs",
+        "description":"API com objetivo de abastecer a aplicação FGAtlas",
+        "contacts":"kauaponte@hotmail.com",
+        "version":"1.0.0"
+    },
+    "servers":{
+        "url":"http://localhost:8080",
+        "description":"API de teste"
+    }
+}
