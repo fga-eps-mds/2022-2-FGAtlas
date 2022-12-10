@@ -37,6 +37,36 @@
         }
       }
     },
+    "/subject/{codeId}": {
+      "get": {
+        "summary": "Pegar uma matéria em específico",
+        "description": "Rota responsável por pegar uma matéria do banco de dados",
+        "tags": ["subject"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Subject"
+              },
+              "examples": {
+                "Subject": {
+                  "value": {
+                    "codeId": "FGA0003",
+                    "name": "Compiladores",
+                    "class": 1
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a subject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/class": {},
     "/building": {},
     "/rooms": {}
