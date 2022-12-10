@@ -86,8 +86,12 @@ npm install
 npm run migrate_dev
 ```
 
-5.	Inicie a aplicação com, isto já garante que o banco de dados estará populado:
+5.	Caso o banco não esteja populado, inicie a aplicação com o comando:
 
+```
+npm run fristStart
+```
+Caso esteja, inicie com :
 ```
 npm run start
 ```
