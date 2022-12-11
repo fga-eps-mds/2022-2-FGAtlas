@@ -1,6 +1,5 @@
 generator client {
-    provider        = "prisma-client-js"
-    previewFeatures = ["interactiveTransactions"]
+    provider = "prisma-client-js"
 }
 
 generator docs {
@@ -19,6 +18,7 @@ model Building {
     longitude Float
     rooms     Room[]
 }
+
 model Room {
     identification String    @id
     level          Int
