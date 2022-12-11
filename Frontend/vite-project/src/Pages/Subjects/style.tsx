@@ -22,12 +22,11 @@ const Center = styled.div`
         width: auto;
         color: white;
         font-size: 18px;
-        padding: 20px 0px 20px 0px;
     }
 
     .load_component {
         width: 100%;
-        height: 60%;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;

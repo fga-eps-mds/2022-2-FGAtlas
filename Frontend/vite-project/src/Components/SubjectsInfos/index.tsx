@@ -1,21 +1,24 @@
 import style from "./style"
 import Box from '@mui/material/Box';
-import { Collapse, formLabelClasses } from "@mui/material";
+import { Collapse,  } from "@mui/material";
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import Checkbox from '@mui/material/Checkbox';
 import { TfiAngleDown, TfiAngleRight } from "react-icons/tfi";
 import FormGroup from '@mui/material/FormGroup';
+import CheckBox from "../Checkbox";
 
 
-export default function SubjectInfos(props: any) {
+export default function SubjectInfos(infos: any) {
     const [ checked, setChecked ] = useState(false);
+
+    const { props } = infos;
+    const { Class } = props;
 
     const handleChange = () => {
         setChecked(!checked);
     };
 
-    console.log(props)
     const controlLabelStyle = {
         width: '100%', 
         boxSizing: 'border-box', 
@@ -26,17 +29,10 @@ export default function SubjectInfos(props: any) {
         borderRadius: `${checked ? '5px 5px 0px 0px' : '5px'}`,
     }
 
-    const checkBoxStyle = {
-        color: '#E9932E',
-        '&.Mui-checked': {
-          color: '#E9932E',
-        },
-    }
 
     const formGroupSyle = {
-        width: '30%',
+        width: 'auto',
         color: 'white',
-        backgroundColor: '#2D2D2D',
         margin: '0px',
     }
 
@@ -45,25 +41,27 @@ export default function SubjectInfos(props: any) {
             <Box sx={{ width: '100%', height: 'auto', h1: {paddingLeft: '10px', fontSize: '16px'}}} >
                 <FormControlLabel
                     control={checked ? <TfiAngleDown /> : <TfiAngleRight />}
-                    label={<h1>Matematica discreta</h1>}
+                    label={<h1>{props.name}</h1>}
                     sx = {controlLabelStyle}
                     onClick={handleChange}
                 />
                 <Box sx={{width:'100%', display: 'flex'}}>
                     <Collapse in={checked} sx={{ width: '100%'}}>
-                        <style.Infos>
-                            <div className="general_information">
-                                <p>Professor: <b>Bernardini</b></p>
-                                <p>Horário: <b>32D32</b></p>
-                                <p>Turma: <b>01</b></p>
-                            </div>
-                            <div className='week_days'>
-                                <FormGroup sx={{width: '100%', display: 'flex', flexDirection: 'row' }}>
-                                    <FormControlLabel sx={formGroupSyle} control={<Checkbox sx={checkBoxStyle} defaultChecked={false} />} label="Segunda" />
-                                    <FormControlLabel sx={formGroupSyle} control={<Checkbox sx={checkBoxStyle} defaultChecked/>} label="Terça" />
-                                </FormGroup>
-                            </div>
-                        </style.Infos>
+                        {
+                            Class.map((infos: any) => {return (
+                                <style.Infos>
+                                        <FormGroup sx={{width: 'auto' }}>
+                                            <CheckBox style={formGroupSyle} label={undefined} />
+                                        </FormGroup>
+                                    <div className="general_information">
+                                        <p>Professor: <b>{infos.teacher}</b></p>
+                                        <p className="end">Horário: <b>{infos.timeAndDay}</b></p>
+                                        <p className="end">Turma: <b>{infos.idClass}</b></p>
+                                    </div>
+                                </style.Infos>
+                            )})
+                        }
+                        
                     </Collapse>
                 </Box>
             </Box>

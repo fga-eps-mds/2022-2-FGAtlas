@@ -19,12 +19,13 @@ export default function Subjects() {
                     (
                         subjectsInfos.map((info: any) => {
                             return (
-                                <SubjectInfos class={info.Class} codeId={info.codeId} name={info.name}/>
+                                <SubjectInfos props={info}/>
                             )
                         })
                     )
                 : 
                     (
+                        
                         <div className="load_component">
                             <Loading />
                         </div>

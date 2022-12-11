@@ -5,21 +5,24 @@ const Infos = styled.div`
     height: auto;
     background-color: #464646;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: row;
+    border: 2px ;
 
     .general_information {
-        width: 95%;
+        width: 100%;
         height: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0px 10px 0px 10px;
 
         p {
+            width: 33%;
             font-size: 16px;
+        }
 
+        .end {
+            text-align: end;
         }
     }
 
@@ -36,7 +39,8 @@ const Infos = styled.div`
 const Card = styled.div`
     width: 100%;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 `
 const Style = {
     Infos,
