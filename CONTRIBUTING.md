@@ -2,7 +2,7 @@
   
   Em primeiro lugar, obrigado por investir seu tempo para contribuir com o nosso projeto! Qualquer contribuição que for feita irá refletir no produto final.
   Neste guia você terá uma visão geral de como abrir uma issue, criar um PR, revisar, e mergar um PR.
-  Leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/C%C3%B3digo_de_Conduta.md) para mantermos uma comunidade saudável.
+  Leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md) para mantermos uma comunidade saudável.
   
 
 ## Objetivo do documento:
