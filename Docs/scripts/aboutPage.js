@@ -2,7 +2,7 @@ const aboutProject = document.querySelector(".about-project");
 
 aboutProject.innerHTML += `
     <div class="logo-about-page" onclick="goToAbout()">
-      <img src="./assets/Logo.png" alt="" />
+      <img src="./Docs/assets/Logo.png" alt="" />
       <h1>FGAtlas</h1>
     </div>
     <div class='menu-about-page'>
@@ -21,13 +21,13 @@ aboutProject.innerHTML += `
     <div class='tecnologies'>
       <h1> TECNOLOGIAS</h1>
       <div class="tecnologies-icons">
-        <img src="./assets/icons8-javascript-48.png" alt="">
-        <img src="./assets/icons8-html-5-48.png" alt="">
-        <img src="./assets/icons8-css3-48.png" alt="">
-        <img src="./assets/react-icon.png" alt="">
-        <img src="./assets/node-icon.png" alt="">
-        <img src="./assets/ts-icon.png" alt="">
-        <img src="./assets/github-icon.png" alt="">
+        <img src="./Docs/assets/icons8-javascript-48.png" alt="">
+        <img src="./Docs/assets/icons8-html-5-48.png" alt="">
+        <img src="./Docs/assets/icons8-css3-48.png" alt="">
+        <img src="./Docs/assets/react-icon.png" alt="">
+        <img src="./Docs/assets/node-icon.png" alt="">
+        <img src="./Docs/assets/ts-icon.png" alt="">
+        <img src="./Docs/assets/github-icon.png" alt="">
       </div>
     </div>
     <h1 class="developers-title">TIME DE DESENVOLVIMENTO</h1>

@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 container.innerHTML = `
     <div class="left">
     <div class="logo">
-      <img src="./assets/Logo.png" alt="" />
+      <img src="./Docs/assets/Logo.png" alt="" />
       <h1>FGAtlas</h1>
     </div>
   </div>
@@ -28,7 +28,7 @@ container.innerHTML = `
       </h1>
       <a href='https://github.com/fga-eps-mds/2022-2-FGAtlas' target='_blank'> <div class='link-github'>Repositório GitHub  </div></a>
       <div class='unb-logos'>
-        <img src='./assets/unb-logo.png' alt=''/>
+        <img src='./Docs/assets/unb-logo.png' alt=''/>
         <div>
           <h1> Universidade de Brasília </br></h1>
           <h1> Faculdade do Gama</h1>
