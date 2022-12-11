@@ -43,7 +43,7 @@
 .oficial-logo {
   height: 35vw;
   width: 45vw;
-  background: url('../../FGAtlasLogo-01.jpg');
+  background: url('../FGAtlasLogo-01.jpg');
   background-size: cover;
   background-position: center;
 }
