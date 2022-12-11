@@ -184,8 +184,8 @@ npm run tests
 <!-- CONTRIBUTING -->
 ## :question: Como contribuir 
 
-Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/Guia_de_Contribu%C3%A7%C3%A3o.md) e para saber como
-se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/C%C3%B3digo_de_Conduta.md)
+Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
+se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
 
 
 <!-- LICENSE -->
