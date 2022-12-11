@@ -184,7 +184,8 @@ npm run tests
 <!-- LICENSE -->
 ## :dash: Licença
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE.txt`: https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/LICENSE for more information.
+
 
 
 
