@@ -122,6 +122,11 @@ npm run tests
 ```
 
 ## :orange_book: Backlog do produto
+<div align="center">
+  <a href="https://github.com">
+    <img src="Docs/BackLog - FGAtlas.png" alt="Logo" width="750" height="500">
+  </a>
+</div>
 
 
 ## :smile: Desenvolvedores
