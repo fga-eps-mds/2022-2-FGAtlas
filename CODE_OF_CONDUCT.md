@@ -72,7 +72,7 @@ público.
 
 ## Contribuição:
 
-  Para detalhes de como contribuir de maneira correta para com o projeto acesse: [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/Guia_de_Contribu%C3%A7%C3%A3o.md)
+  Para detalhes de como contribuir de maneira correta para com o projeto acesse: [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md)
   
 
 ## Referências:
