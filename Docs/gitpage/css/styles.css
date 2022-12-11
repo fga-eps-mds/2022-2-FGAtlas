@@ -1,4 +1,5 @@
-@import url('./developersInfo.css');
+@import url('./aboutPage.css');
+
 *{
   box-sizing: border-box; 
 }
@@ -7,7 +8,9 @@ body {
   background-color: #2D2D2D;
   font-family: 'Righteous', cursive;
 }
-
+.hide {
+  display: none !important;
+}
 .container {
   max-width: 100vw;
   display: flex;
@@ -39,7 +42,7 @@ body {
 .image {
   width: 25vw;
   height: 70vh;
-  background: url('../../../Frontend/vite-project/src/Images/fga.jpg');
+  background: url('../assets/fga.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -54,10 +57,13 @@ body {
 }
 
 .softwareInfo {
-  width: 60%;
+  width: 70%;
   margin: auto;
   padding-top: 25%;
   padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .softwareInfo h1 {
   font-family: 'Outfit', sans-serif;
@@ -69,6 +75,41 @@ body {
   line-height: 1.5;
 }
 
+.link-github {
+  background-color: #E9932E;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.softwareInfo  a  {
+  text-decoration: none;
+  width: 40%;
+  font-family: 'Outfit', sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+
+.unb-logos {
+  display: flex;  
+  margin-top: 40px;
+}
+
+.unb-logos img {
+  width: 80px;
+  height: 55px;
+  margin-right: 8px;
+}
+
+.unb-logos div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .position-icon {
   display: flex;
@@ -108,7 +149,7 @@ label.icon {
 .icon:hover .menu,
 .icon:hover .menu::before,
 .icon:hover .menu::after {
-    background: #997C6C;
+    background: #E9932E;
 }
 
 .icon .menu {
@@ -175,5 +216,5 @@ nav {
 
 .options h1:hover {
     cursor: pointer;
-    color: #997C6C;
+    color: #E9932E;
 }
