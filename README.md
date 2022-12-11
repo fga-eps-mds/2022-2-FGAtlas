@@ -187,6 +187,9 @@ npm run tests
 Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
 se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
 
+## &#128511; Autores
+
+Kauã Vinícius e Rafael Bosi
 
 <!-- LICENSE -->
 ## :dash: Licença
