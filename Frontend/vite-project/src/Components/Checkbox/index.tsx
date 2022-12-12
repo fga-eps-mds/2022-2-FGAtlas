@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { FgAtlasContexts } from "../../Contexts";
 
 export default function CheckBox(infos: any) {
-    const { label, style, subjectName } = infos;
+    const { label, style, subjectId, subjectName } = infos;
     const [ checked, setChecked ] = useState(false);
     const [ disableCheckbox, setDisableCheckbox ] = useState(false);
     const { setSubjectChoosed, subjectChoosed } = useContext(FgAtlasContexts);
@@ -18,8 +18,11 @@ export default function CheckBox(infos: any) {
         }
     }
 
+    console.log(infos)
+
     useEffect(() => {
-        if(subjectChoosed != null) {
+        if(subjectChoosed.name != null) {
+            console.log('oe')
             setDisableCheckbox(true);
         }
         else {
@@ -30,10 +33,11 @@ export default function CheckBox(infos: any) {
     function checkCheckBox() {
         setChecked(!checked)
         if(!checked) {
-            setSubjectChoosed(subjectName);
+            setSubjectChoosed({name: subjectName, id: subjectId});
+            console.log(subjectChoosed)
         }
         else {
-            setSubjectChoosed(null);
+            setSubjectChoosed({name: null, id: null});
         }
     }
 
@@ -44,7 +48,7 @@ export default function CheckBox(infos: any) {
         control={
             <Checkbox 
             sx={checkBoxStyle} 
-            disabled={subjectChoosed != subjectName && disableCheckbox ? true : false}
+            disabled={subjectChoosed.id != subjectId && disableCheckbox ? true : false}
             defaultChecked={false} 
             onClick={() =>{
                 checkCheckBox()

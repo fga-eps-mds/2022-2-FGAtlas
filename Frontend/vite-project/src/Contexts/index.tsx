@@ -13,7 +13,7 @@ type ButtonProps = {
 export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children }) => {
 
     const [ subjectsInfos, setSubjectsInfos ] = useState({});
-    const [ subjectChoosed, setSubjectChoosed ] = useState(null)
+    const [ subjectChoosed, setSubjectChoosed ] = useState({name: null, id: null})
 
     const getSubjects = () => {
         axios.get(`${URL}/api/subject/`)
