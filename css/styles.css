@@ -1,5 +1,6 @@
 @import url('./aboutPage.css');
 @import url('./howToUsePage.css');
+@import url('./backlog.css');
 
 *{
   box-sizing: border-box; 

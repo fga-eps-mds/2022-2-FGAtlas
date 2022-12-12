@@ -1,0 +1,26 @@
+.backlog-container {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.backlog-container h1 {
+  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.image-backlog {
+  background: url('../assets/BackLogFGAtlas.png');
+  width: 85vw;
+  height: 90vh;
+  background-size:auto;
+  background-position: center;
+  margin-bottom: 40px;
+}
