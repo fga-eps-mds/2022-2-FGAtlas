@@ -13,10 +13,11 @@ type ButtonProps = {
 export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children }) => {
 
     const [ subjectsInfos, setSubjectsInfos ] = useState({});
+    const [ subjectChoosed, setSubjectChoosed ] = useState(null)
 
     const getSubjects = () => {
         axios.get(`${URL}/api/subject/`)
-        .then((answer) => {setSubjectsInfos(answer.data); console.log(answer.data)})
+        .then((answer) => {setSubjectsInfos(answer.data)})
         .catch((e) => console.log(e.response.data))
     }
 
@@ -24,7 +25,9 @@ export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children
         <FgAtlasContexts.Provider
             value = {{
                 subjectsInfos,
-                getSubjects
+                getSubjects,
+                setSubjectChoosed,
+                subjectChoosed
             }}>
                 { children }
         </FgAtlasContexts.Provider>

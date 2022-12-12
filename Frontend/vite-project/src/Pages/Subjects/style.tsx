@@ -16,7 +16,6 @@ const Center = styled.div`
     background-color: #2D2D2D;
     box-shadow: 0px 10px 40px 20px black;
     padding: 40px;
-    /* overflow-y: scroll; */
 
     p {
         width: auto;

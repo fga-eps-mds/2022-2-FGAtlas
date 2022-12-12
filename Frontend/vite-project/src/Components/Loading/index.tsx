@@ -5,7 +5,7 @@ export default function Loading() {
         <TailSpin
             color="white" 
             height={100}
-            width={100} 
+            width={100}
         />
     )
 }
