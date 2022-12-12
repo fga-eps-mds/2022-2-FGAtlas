@@ -1,0 +1,9 @@
+{
+  "homepage": "https://fga-eps-mds.github.io/2022-2-FGAtlas/",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
