@@ -17,7 +17,7 @@ container.innerHTML = `
         <div class="options">
           <h1 onclick="goToAbout(), closeMenu()">Sobre o projeto</h1>
           <h1 onclick="goToHowToUse(), closeMenu()">Como usar o projeto</h1>
-          <h1>Backlog</h1>
+          <h1 onclick="goBacklogGoHome(), closeMenu()">Backlog</h1>
 
         </div>
       </nav>

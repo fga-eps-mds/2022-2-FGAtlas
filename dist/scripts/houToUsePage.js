@@ -7,7 +7,7 @@ howToUse.innerHTML += `
     <div class='menu-about-page'>
         <h1 onclick='goToHowToUse()'> HomePage </h1>
         <h1 onclick='leaveAboutGoUse()'> Sobre o projeto </h1>
-        <h1> Backlog </h1>
+        <h1 onclick='goUseGoBacklog()'> Backlog </h1>
     </div>
     <div class='scripts-container'>
         <div class='single-instruction'>

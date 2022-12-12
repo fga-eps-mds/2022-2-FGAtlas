@@ -8,7 +8,7 @@ aboutProject.innerHTML += `
     <div class='menu-about-page'>
       <h1 onclick='goToAbout()'> HomePage </h1>
       <h1 onclick='leaveAboutGoUse()'> Como usar o projeto </h1>
-      <h1> Backlog </h1>
+      <h1 onclick='goAboutGoBacklog()'> Backlog </h1onclick=>
     </div>
     <div class='oficial-logo'>
     </div>
