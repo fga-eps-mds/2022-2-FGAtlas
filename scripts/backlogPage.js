@@ -1,6 +1,6 @@
 const backlog = document.querySelector('.backlog');
 backlog.innerHTML += `
-    <div class="logo-about-page" onclick="goToAbout()">
+    <div class="logo-about-page" onclick="goBacklogGoHome()">
         <img src="./assets/Logo.png" alt="" />
         <h1>FGAtlas</h1>
     </div>

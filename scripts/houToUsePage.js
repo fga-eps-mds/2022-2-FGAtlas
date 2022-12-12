@@ -1,6 +1,6 @@
 const howToUse = document.querySelector(".how-to-use");
 howToUse.innerHTML += `
-    <div class="logo-about-page" onclick="goToAbout()">
+    <div class="logo-about-page" onclick="goToHowToUse()">
         <img src="./assets/Logo.png" alt="" />
         <h1>FGAtlas</h1>
     </div>
