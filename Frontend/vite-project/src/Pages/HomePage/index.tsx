@@ -4,11 +4,11 @@ import Style from "./style"
 import Logo from './../../Images/Logo.png'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import buttonTheme from "./themes";
+import buttonTheme from "../../GlobalStyles/ButtonStyle/themes";
 import { TfiEmail, TfiGithub } from "react-icons/tfi";
 import { ThemeProvider, Typography } from "@mui/material";
 import DevelopersInfo from "../../Components/DevelopersInfo";
-import muiStyle from "./muiStyles";
+import muiStyle from "../../GlobalStyles/ButtonStyle/muiStyles";
 import arrayImagesDevelopers from "./arrayImagesDevelopers";
 
 export default function HomePage() {

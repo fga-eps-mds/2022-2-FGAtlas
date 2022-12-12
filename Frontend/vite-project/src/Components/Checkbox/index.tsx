@@ -18,8 +18,6 @@ export default function CheckBox(infos: any) {
         }
     }
 
-    console.log(infos)
-
     useEffect(() => {
         if(subjectChoosed.name != null) {
             console.log('oe')

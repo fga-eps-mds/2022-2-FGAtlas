@@ -40,10 +40,20 @@ const SubjectsList = styled.div`
     border-radius: 5px;
     color: white;
 `
+const GoMap = styled.div`
+    width: 10%;
+    height: 97vh;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+`
 const Style = {
     Container,
     Center,
-    SubjectsList
+    SubjectsList,
+    GoMap
 }
 
 export default Style;
