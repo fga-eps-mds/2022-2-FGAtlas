@@ -13,15 +13,24 @@
     "use": "['file-loader']"
   },
   "dependencies": {
+    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.16",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/lab": "^5.0.0-alpha.111",
+    "@mui/material": "^5.10.17",
+    "@mui/styled-engine": "^5.10.16",
+    "@types/node": "^18.11.12",
     "@types/react-icons": "^3.0.0",
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.4.3",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "ts-dotenv": "^0.9.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
