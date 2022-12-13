@@ -23,7 +23,7 @@ const navigate = useNavigate();
                     <div className="links">
                         <p onClick={() => window.scrollTo(0, 2000)}>Contato</p>
                         <p onClick={() => window.scrollTo(0, 1000)}>Sobre</p>
-                        <p>Mapa</p>
+                        <p onClick={() => navigate('/map')}>Mapa</p>
                     </div>
                 </Style.ToolBar>
                 <Style.Left>
@@ -32,9 +32,8 @@ const navigate = useNavigate();
                 <Style.Right>
                     <div>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori
+                            Olá, somos a FGAtlas, uma página na qual você pode consultar aonde está a localização da sua 
+                            sala na FGA-UNB, para isto, apenas clique no botão abaixo e selecione sua turma!!
                         </p>
 
                         <ThemeProvider theme={buttonTheme}>

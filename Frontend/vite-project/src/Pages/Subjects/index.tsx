@@ -13,12 +13,13 @@ import Alert from '@mui/material/Alert';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from "react-router-dom";
 
 export default function Subjects() {
     const { getSubjects, subjectsInfos, subjectChoosed } = useContext(FgAtlasContexts);
     const [ buttonDisabled, setButtonDisabled ] = useState(true)
     const [ open, setOpen ] = useState(false);
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         getSubjects()
@@ -91,12 +92,13 @@ export default function Subjects() {
                     <Stack 
                     direction="row" 
                     spacing={2} 
-                    onClick={() => {buttonDisabled ? setOpen(true) : ""}}
+                    onClick={() => {buttonDisabled ? setOpen(true) : navigate('/map')}}
                     >
                         <Button 
                         disabled={buttonDisabled} 
                         variant="contained" 
                         sx={ButtonStyleMui}
+                       
                         >
                             <TfiAngleRight />
                         </Button>
