@@ -20,7 +20,6 @@ export default function CheckBox(infos: any) {
 
     useEffect(() => {
         if(subjectChoosed.name != null) {
-            console.log('oe')
             setDisableCheckbox(true);
         }
         else {
@@ -32,7 +31,6 @@ export default function CheckBox(infos: any) {
         setChecked(!checked)
         if(!checked) {
             setSubjectChoosed({name: subjectName, id: subjectId});
-            console.log(subjectChoosed)
         }
         else {
             setSubjectChoosed({name: null, id: null});

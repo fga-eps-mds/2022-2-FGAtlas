@@ -14,7 +14,7 @@ const Center = styled.div`
     height: 100%;
     box-sizing: border-box;
     background-color: #2D2D2D;
-    box-shadow: 0px 10px 40px 20px black;
+    box-shadow: 0px 30px 40px 0px black;
     padding: 40px;
 
     p {

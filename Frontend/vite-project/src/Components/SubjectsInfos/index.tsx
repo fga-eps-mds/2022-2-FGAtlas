@@ -50,9 +50,9 @@ export default function SubjectInfos(infos: any) {
                         {
                             Class.map((infos: any) => {return (
                                 <style.Infos>
-                                        <FormGroup sx={{ width: 'auto' }}>
-                                            <CheckBox subjectName={props.name} subjectId={infos.id} style={formGroupSyle} label={undefined} />
-                                        </FormGroup>
+                                    <FormGroup sx={{ width: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        <CheckBox subjectName={props.name} subjectId={infos.id} style={formGroupSyle} label={undefined} />
+                                    </FormGroup>
                                     <div className="general_information">
                                         <p>Professor: <b>{infos.teacher}</b></p>
                                         <p className="end">Horário: <b>{infos.timeAndDay}</b></p>

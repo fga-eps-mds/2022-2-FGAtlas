@@ -14,7 +14,7 @@ const Infos = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 10px 0px 10px;
+        padding: 10px 10px 10px 10px;
 
         p {
             width: 33%;
@@ -24,16 +24,6 @@ const Infos = styled.div`
         .end {
             text-align: end;
         }
-    }
-
-    .week_days {
-        width: 100%;
-        height: auto;
-        display: flex;
-        box-sizing: border-box;
-        justify-content: center;
-        background-color: #2d2d2d;
-        border: 2px solid #464646;
     }
 `
 const Card = styled.div`
