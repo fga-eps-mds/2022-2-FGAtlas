@@ -66,7 +66,10 @@ Tecnologias utilizadas neste repositório:
 <!-- GETTING STARTED -->
 ## :exclamation: Pré-requisitos
 
-Antes de começar, você precisa ter instalado as seguintes ferramentas: Postgres14, NodeJs e git.
+Antes de começar, você precisa ter instalado as seguintes ferramentas: 
+- [Postgres14](https://www.postgresql.org/download/);
+- [NodeJs](https://nodejs.org/en/blog/release/v16.16.0/);
+- [git](https://git-scm.com/download/win).
 
 ## :chart_with_upwards_trend: Como rodar
 
@@ -122,17 +125,14 @@ npm run tests
 ```
 
 ## :orange_book: Backlog do produto
-<div align="center">
-  <a href="https://github.com">
-    <img src="Docs/BackLog - FGAtlas.png" alt="Logo" width="750" height="500">
-  </a>
-</div>
+
+Para visualizar o BackLog do produto, acesse: [BackLog](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/Docs/BackLog%20-%20FGAtlas.png)
 
 <!--WHERE WE CONTRIBUT-->
 ## :heart: Comunidade
 
-Para conseguir desenvolver o projeto FGAtlas de maneira produtiva e dinâmica utilizamos o Whatsapp para uma comunicação mais rápida e para realizar as reuniões, como 
-dailys e reuniões semanais, e definição de Sprints e Issues utilizamos o Discord. Além disso, para organização do código e comentar detalhes importantes utilizamos as próprias Issues. 
+Para conseguir desenvolver o projeto FGAtlas de maneira produtiva e dinâmica utilizamos o [Whatsapp](https://chat.whatsapp.com/CPuI4yEmlGc8696iUD4hgA) para uma comunicação mais rápida e para realizar as reuniões, como 
+dailys e reuniões semanais, e definição de Sprints e Issues utilizamos o [Discord](https://discord.gg/Txkht4J7). Além disso, para organização do código e comentar detalhes importantes utilizamos as próprias Issues. Para uma melhor organização das issues e para uma metrificação mais detalhada das contribuições utilizamos o [ZenHub](https://app.zenhub.com/workspaces/fgatlhas-638138d3a6b09c276ce2f78c/board?invite=LZvdxJcbarJnV5o7BLmqCN8D). 
 
 <!-- CONTRIBUTING -->
 ## :question: Como contribuir 
@@ -192,20 +192,7 @@ se deve comportar para um bom andamento do projeto, leia nosso [Código de Condu
 </center>
 
 ### Autoavaliação do grupo
-A seguir temos, respectivamente, a nota com a qual o membro se auto-avaliou e a nota atribuida pelo grupo em relação a contribuição para com o projeto.
-
-	Carla Clementino – 7.5 / 9.5 
-	Debora Caires - 6 / 8
-	João – 3 / 5.3	
-	Kaua – 10 / 10
-	Paulo – 5 / 7.5
-	Rafa – 9 / 8.6
-	Sabrina – 5.5 / 6.1
-
-Como foi calculado a nota de contribuição do membro por parte do grupo ? 
-- (N1 + N2 + N3 + N4 + N5 + N6 + N7) / 7
-
-Sendo N a nota atribuida por cada membro ao indivíduo avaliado.
+Foi feita uma [autoavalição dos membros](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/Docs/Autoavalia%C3%A7%C3%A3o_dos_membros.md) em relação a contribuição com o projeto 
 
 ## &#128511; Autores
 
