@@ -20,6 +20,7 @@
     "@mui/lab": "^5.0.0-alpha.111",
     "@mui/material": "^5.10.17",
     "@mui/styled-engine": "^5.10.16",
+    "@react-google-maps/api": "^2.17.1",
     "@types/node": "^18.11.12",
     "@types/react-icons": "^3.0.0",
     "axios": "^1.2.1",
