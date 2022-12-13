@@ -128,6 +128,17 @@ npm run tests
   </a>
 </div>
 
+<!--WHERE WE CONTRIBUT-->
+## :heart: Comunidade
+
+Para conseguir desenvolver o projeto FGAtlas de maneira produtiva e dinâmica utilizamos o Whatsapp para uma comunicação mais rápida e para realizar as reuniões, como 
+dailys e reuniões semanais, e definição de Sprints e Issues utilizamos o Discord. Além disso, para organização do código e comentar detalhes importantes utilizamos as próprias Issues. 
+
+<!-- CONTRIBUTING -->
+## :question: Como contribuir 
+
+Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
+se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
 
 ## :smile: Desenvolvedores
 
@@ -181,7 +192,7 @@ npm run tests
 </center>
 
 ### Autoavaliação do grupo
-Seguimos a sequência, nota em que se auto-atribui e nota do grupo.
+A seguir temos, respectivamente, a nota com a qual o membro se auto-avaliou e a nota atribuida pelo grupo em relação a contribuição para com o projeto.
 
 	Carla Clementino – 7.5 / 9.5 
 	Debora Caires - 6 / 8
@@ -191,13 +202,10 @@ Seguimos a sequência, nota em que se auto-atribui e nota do grupo.
 	Rafa – 9 / 8.6
 	Sabrina – 5.5 / 6.1
 
+Como foi calculado a nota de contribuição do membro por parte do grupo ? 
+- (N1 + N2 + N3 + N4 + N5 + N6 + N7) / 7
 
-
-<!-- CONTRIBUTING -->
-## :question: Como contribuir 
-
-Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
-se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
+Sendo N a nota atribuida por cada membro ao indivíduo avaliado.
 
 ## &#128511; Autores
 
