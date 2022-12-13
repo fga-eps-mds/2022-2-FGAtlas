@@ -183,13 +183,13 @@ npm run tests
 ### Autoavaliação do grupo
 Seguimos a sequência, nota em que se auto-atribui e nota do grupo.
 
-Carla Clementino – 7.5 / 9.5
-Debora Caires - 6 / 8
-João – 3 / 5.3
-Kaua – 10 / 10
-Paulo – 5 / 7.5
-Rafa – 9 / 8.6
-Sabrina – 5.5 / 6.1
+	Carla Clementino – 7.5 / 9.5 
+	Debora Caires - 6 / 8
+	João – 3 / 5.3	
+	Kaua – 10 / 10
+	Paulo – 5 / 7.5
+	Rafa – 9 / 8.6
+	Sabrina – 5.5 / 6.1
 
 
 
