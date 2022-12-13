@@ -75,8 +75,14 @@ Antes de começar, você precisa ter instalado as seguintes ferramentas:
 
 Para executar o backend:
 1.	Clone o repositório
+```
+git clone https://github.com/fga-eps-mds/2022-2-FGAtlas.git
+```
 	
 2. 	Inicie o Postgres com o nome do banco de desenvolvimento
+```
+createdb FGAtlas_dev
+```
 
 3. 	Instale todas as dependências do repositório com:
 ```
@@ -97,8 +103,14 @@ npm run start
 
 Para executar o frontend:
 1. Clone o repositório
+```
+git clone https://github.com/fga-eps-mds/2022-2-FGAtlas.git
+```
 
 2. Vá para a pasta do vite
+```
+cd ./vite-project
+```
 
 3. Instale todas as dependências com:
 ```
@@ -113,7 +125,13 @@ npm run dev
 
 Para executar os testes do backend:
 1. 	Clone o repositório
+```
+git clone https://github.com/fga-eps-mds/2022-2-FGAtlas.git
+```
 2. 	Inicie o Postgres com o nome do banco de desenvolvimento
+```
+createdb FGAtlas_dev
+```
 
 3. 	Instale todas as dependências do repositório com:
 ```
@@ -121,7 +139,7 @@ npm install
 ```
 4. 	Inicie os testes com:
 ```
-npm run tests
+npm run test
 ```
 
 ## :orange_book: Backlog do produto
