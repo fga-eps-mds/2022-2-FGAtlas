@@ -41,15 +41,19 @@ async function scrap() {
     el.map((e: any) => e.className)
   );
 
-  await generatePrisma.generateBuildings();
-  await generatePrisma.generateRooms();
-  await generatePrisma.generateSubject(codigoNome);
-  await generatePrisma.generateClass(codigoNome, matrizRef, nome, local, turma, horario);
-
+  try {
+    await generatePrisma.generateBuildings();
+    await generatePrisma.generateRooms();
+    await generatePrisma.generateSubject(codigoNome);
+    await generatePrisma.generateClass(codigoNome, matrizRef, nome, local, turma, horario);
+  } catch (e) {
+    /* eslint-disable*/
+    console.log("Dados já cadastrados");
+  }
   await browser.close();
 }
 
 /* eslint-disable*/
 scrap()
-  .then(() => console.log("Dados salvos com sucesso!"))
+  .then(() => console.log("Processo Finalizado!"))
   .catch(console.error);

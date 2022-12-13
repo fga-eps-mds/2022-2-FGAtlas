@@ -8,6 +8,8 @@ const generateSubject: any = async (codigoNome: String[]) => {
     name: el.split("-")[1].trim(),
   }));
   await prisma.subject.createMany({ data: subjects });
+  /* eslint-disable*/
+  console.log("Subjects Geradas");
 };
 
 // Jogar dados de prédios para o banco de dados
@@ -24,6 +26,7 @@ const generateBuildings = async () => {
   }
 
   await prisma.building.createMany({ data: arrays });
+  console.log("Buildings Geradas");
 };
 
 // Jogar dados de salas para o banco de dados
@@ -40,6 +43,7 @@ const generateRooms = async () => {
     array.push(room);
   }
   await prisma.room.createMany({ data: array });
+  console.log("Rooms Geradas");
 };
 
 // Jogar dados de turmas para o banco de dados, exige uma maior tratativa de dados
@@ -129,6 +133,7 @@ const generateClass = async (
       },
     });
   }
+  console.log("Classes Geradas");
 };
 
 export default { generateSubject, generateClass, generateBuildings, generateRooms };

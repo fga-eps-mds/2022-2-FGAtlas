@@ -61,7 +61,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas da FG
 
 Tecnologias utilizadas neste repositório: 
 
-![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,git,github,prisma)
+![Tecnologias](https://skillicons.dev/icons?i=js,html,css,react,nodejs,typescript,vite,git,github,prisma,postgres)
 
 <!-- GETTING STARTED -->
 ## :exclamation: Pré-requisitos
@@ -86,12 +86,8 @@ npm install
 npm run migrate_dev
 ```
 
-5.	Caso o banco não esteja populado, inicie a aplicação com o comando:
+5.	Inicie a aplicação com o comando:
 
-```
-npm run fristStart
-```
-Caso esteja, inicie com :
 ```
 npm run start
 ```
@@ -126,6 +122,11 @@ npm run tests
 ```
 
 ## :orange_book: Backlog do produto
+<div align="center">
+  <a href="https://github.com">
+    <img src="Docs/BackLog - FGAtlas.png" alt="Logo" width="750" height="500">
+  </a>
+</div>
 
 
 ## :smile: Desenvolvedores
@@ -183,12 +184,18 @@ npm run tests
 <!-- CONTRIBUTING -->
 ## :question: Como contribuir 
 
+Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
+se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
 
+## &#128511; Autores
+
+Kauã Vinícius e Rafael Bosi
 
 <!-- LICENSE -->
 ## :dash: Licença
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/LICENSE) for more information.
+
 
 
 
