@@ -10,8 +10,11 @@ import { ThemeProvider, Typography } from "@mui/material";
 import DevelopersInfo from "../../Components/DevelopersInfo";
 import muiStyle from "../../GlobalStyles/ButtonStyle/muiStyles";
 import arrayImagesDevelopers from "./arrayImagesDevelopers";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+const navigate = useNavigate();
+
     return (
         <>
             <Style.FirstPart>
@@ -36,7 +39,7 @@ export default function HomePage() {
 
                         <ThemeProvider theme={buttonTheme}>
                             <Stack direction="row" spacing={2}>
-                                <Button variant="contained" sx={muiStyle.style.button}>Encontrar sala</Button>
+                                <Button onClick={() => navigate('/subjects')} variant="contained" sx={muiStyle.style.button}>Encontrar sala</Button>
                             </Stack>
                         </ThemeProvider>
                     </div>
