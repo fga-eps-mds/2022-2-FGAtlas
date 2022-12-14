@@ -1,12 +1,15 @@
-import { GoogleMap, Marker, useJsApiLoader, MarkerF } from '@react-google-maps/api';
+import { GoogleMap,useJsApiLoader, MarkerF } from '@react-google-maps/api';
+import { useEffect ,useContext} from 'react';
+import { FgAtlasContexts } from "../../Contexts"
 
 const containerStyle = {
   width: '100vw',
   height: '100vh'
 };
 
-
 export default function Map() {
+    const {getSubjectLocalization,subjectPlaceInfo,subjectChoosed} = useContext(FgAtlasContexts);
+
     const {isLoaded} = useJsApiLoader({
         id:"google-map-script",
         googleMapsApiKey:"AIzaSyDa3iBeFvaccXIS0lAAMZUhRdBl_Mof72Q"
@@ -17,10 +20,10 @@ export default function Map() {
       lng: -48.04470473324397
     };
 
-    const position = {
-        lat: -15.98973715145267,
-        lng: -48.04470473324397
-    }
+
+    useEffect(() => {
+      getSubjectLocalization(subjectChoosed.id);
+    },[]);
 
     return (
       <div>
@@ -29,7 +32,7 @@ export default function Map() {
               mapContainerStyle={containerStyle}
               center={center}
               zoom={18}>
-            <MarkerF position={{lat: position.lat, lng: position.lng}} label="sua sala" />
+              <MarkerF position={{lat: subjectPlaceInfo.room[0].latitude, lng: subjectPlaceInfo.room[0].longitude}}/>
           </GoogleMap>
           )          
           :

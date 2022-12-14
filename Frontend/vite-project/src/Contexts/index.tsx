@@ -14,6 +14,7 @@ export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children
 
     const [ subjectsInfos, setSubjectsInfos ] = useState({});
     const [ subjectChoosed, setSubjectChoosed ] = useState({name: null, id: null})
+    const [ subjectPlaceInfo, setSubjectPlaceInfo ] = useState({});
 
     const getSubjects = () => {
         axios.get(`${URL}/api/subject/`)
@@ -21,9 +22,14 @@ export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children
         .catch((e) => console.log(e.response.data))
     }
 
-    // const getSubjectLocalization = () => {
-    //     axios.get(`${URL}/api/subjec`)
-    // }
+     const getSubjectLocalization = (id:number) => {
+        axios.get(`${URL}/api/class/${id}`)
+        .then((answer) => {
+            console.log(answer.data);
+            setSubjectPlaceInfo(answer.data)
+           })
+        .catch((e)=>{console.log(e.response.data)})
+    }
 
     return (
         <FgAtlasContexts.Provider
@@ -31,7 +37,9 @@ export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children
                 subjectsInfos,
                 getSubjects,
                 setSubjectChoosed,
-                subjectChoosed
+                subjectChoosed,
+                getSubjectLocalization,
+                subjectPlaceInfo
             }}>
                 { children }
         </FgAtlasContexts.Provider>
