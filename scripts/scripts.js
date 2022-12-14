@@ -42,6 +42,8 @@ function leaveAboutGoUse() {
 function goBacklogGoHome() {
     const container = document.querySelector('.container');
     const div = document.querySelector('.backlog');
+    console.log(container, 'container')
+    console.log(div, 'div')
     if (!container.classList.contains('hide')) {
         container.classList.add('hide');
         div.classList.remove('hide');
