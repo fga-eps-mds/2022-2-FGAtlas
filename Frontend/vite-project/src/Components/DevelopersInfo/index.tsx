@@ -4,7 +4,6 @@ import { styles } from './styleds/muiStyles';
 import Styles from './styleds/styles';
 
 export default function DevelopersInfo (image:any) {
-  console.log(image)
   return (
     <Styles.Container>
         <Image img={image.image}/>

@@ -21,6 +21,10 @@ export const FgAtlasProvider: React.FunctionComponent<ButtonProps> = ({ children
         .catch((e) => console.log(e.response.data))
     }
 
+    // const getSubjectLocalization = () => {
+    //     axios.get(`${URL}/api/subjec`)
+    // }
+
     return (
         <FgAtlasContexts.Provider
             value = {{

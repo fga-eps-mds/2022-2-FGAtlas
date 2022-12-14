@@ -3,14 +3,12 @@ import SubjectInfos from "../../Components/SubjectsInfos"
 import { FgAtlasContexts } from "../../Contexts"
 import { useContext, useEffect, useState } from "react";
 import Loading from "../../Components/Loading";
-import { TfiAngleRight, TfiClose } from "react-icons/tfi";
+import { TfiAngleRight } from "react-icons/tfi";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import buttonTheme from "../../GlobalStyles/ButtonStyle/themes";
 import { ThemeProvider } from "@mui/material";
-import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
-import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from "react-router-dom";
@@ -22,7 +20,8 @@ export default function Subjects() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        getSubjects()
+        getSubjects();
+        console.log(subjectsInfos)
     },[]);
 
     useEffect(() => {
