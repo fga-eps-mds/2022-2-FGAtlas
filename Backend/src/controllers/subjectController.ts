@@ -4,6 +4,7 @@ import prisma from "../prismaClient";
 const readSubjects: RequestHandler = async (req, res) => {
   const subjects = await prisma.subject.findMany({
     select: { name: true, codeId: true, Class: true },
+    orderBy: { name: "asc" },
   });
   return res.json(subjects);
 };
