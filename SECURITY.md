@@ -4,9 +4,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| ^4.18.1 | Express            |
-| ^2.8.5  | Cors               |
-
+| ^16.17.0| NodeJs             |
+| ^14     | Postgres           |
 
 ## Reporting a Vulnerability
 
