@@ -53,22 +53,22 @@
 <!-- ABOUT THE PROJECT -->
 ## :earth_americas: Sobre o projeto
 
-FGAtlas é um projeto web que fornece a localização dos prédios e salas da FGA, a fim de auxiliar calouros e veteranos a encontrarem os locais onde terão suas aulas. A ideia surgiu após a equipe realizar, em grupos da faculdade, uma pesquisa via forms na qual questionava os estudantes qual era a maior dificuldade dos mesmos no campus, a grande parte das respostas foram direcionadas à questões envolvendo localização. 
+FGAtlas é um projeto web que fornece a localização dos prédios e salas da FGA, a fim de auxiliar calouros e veteranos a encontrarem os locais onde terão suas aulas. A ideia surgiu após a equipe realizar, em grupos da faculdade, uma pesquisa via forms na qual questionava os estudantes qual era a maior dificuldade dos mesmos no campus, a grande parte das respostas foram direcionadas à questões envolvendo localização. Segue algumas telas da aplicação:
 
 <!-- PROJECT PRINTS -->
 <br />
 <div align="center">
   <a href="https://github.com">
-    <img src="Docs/Prints_FGAtlas/Print_Home.png" alt="Print1" width="510" height="390">
+    <img src="Docs/Prints_FGAtlas/Print_Home.png" alt="Print1" width="410" height="290">
   </a>
   <a href="https://github.com">
-    <img src="Docs/Prints_FGAtlas/Print_sobre_nos.png" alt="Print1" width="510" height="390">
+    <img src="Docs/Prints_FGAtlas/Print_sobre_nos.png" alt="Print1" width="410" height="290">
   </a>
   <a href="https://github.com">
-    <img src="Docs/Prints_FGAtlas/Print_seleção_de_turmas.png" alt="Print1" width="500" height="390">
+    <img src="Docs/Prints_FGAtlas/Print_seleção_de_turmas.png" alt="Print1" width="400" height="290">
   </a>
   <a href="https://github.com">
-    <img src="Docs/Prints_FGAtlas/Print_mapa_FGA.png" alt="Print1" width="510" height="390">
+    <img src="Docs/Prints_FGAtlas/Print_mapa_FGA.png" alt="Print1" width="410" height="290">
   </a>
  </div>
 
