@@ -65,7 +65,7 @@ FGAtlas é um projeto web que fornece a localização dos prédios e salas da FG
     <img src="Docs/Prints_FGAtlas/Print_sobre_nos.png" alt="Print1" width="410" height="290">
   </a>
   <a href="https://github.com">
-    <img src="Docs/Prints_FGAtlas/Print_seleção_de_turmas.png" alt="Print1" width="400" height="290">
+    <img src="Docs/Prints_FGAtlas/Print_seleção_de_turmas.png" alt="Print1" width="410" height="290">
   </a>
   <a href="https://github.com">
     <img src="Docs/Prints_FGAtlas/Print_mapa_FGA.png" alt="Print1" width="410" height="290">
