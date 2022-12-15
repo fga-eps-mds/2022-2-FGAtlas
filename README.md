@@ -68,7 +68,7 @@ Tecnologias utilizadas neste repositório:
 
 Antes de começar, você precisa ter instalado as seguintes ferramentas: 
 - [Postgres14](https://www.postgresql.org/download/);
-- [NodeJs](https://nodejs.org/en/blog/release/v16.16.0/);
+- [NodeJs 16.17.0](https://nodejs.org/en/blog/release/v16.16.0/);
 - [git](https://git-scm.com/download/win).
 
 ## :chart_with_upwards_trend: Como rodar
