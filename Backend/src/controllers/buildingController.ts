@@ -1,4 +1,5 @@
 import { RequestHandler } from "express";
+import HttpError from "http-errors";
 import prisma from "../prismaClient";
 
 const readBuildings: RequestHandler = async (req, res) => {
@@ -11,6 +12,9 @@ const readBuildings: RequestHandler = async (req, res) => {
 const readOneBuilding: RequestHandler = async (req, res) => {
   const { name } = req.params;
   const building = await prisma.building.findMany({ where: { name } });
+  if (building.length === 0) {
+    throw new HttpError.NotFound();
+  }
   return res.json(building);
 };
 

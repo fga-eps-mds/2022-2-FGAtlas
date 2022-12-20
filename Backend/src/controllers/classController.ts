@@ -1,4 +1,5 @@
 import { RequestHandler } from "express";
+import HttpError from "http-errors";
 import prisma from "../prismaClient";
 import hourAndDay from "../services/generateHourAndDay";
 
@@ -17,6 +18,10 @@ const readOneClass: RequestHandler = async (req, res) => {
       timeAndDay: true,
     },
   });
+
+  if (classOne.length === 0) {
+    throw new HttpError.NotFound();
+  }
 
   const newClass = {
     id: classOne[0].id,
@@ -70,6 +75,10 @@ const readBySubject: RequestHandler = async (req, res) => {
       timeAndDay: true,
     },
   });
+
+  if (classes.length === 0) {
+    throw new HttpError.NotFound();
+  }
 
   const newClass = classes.map((classOne) => ({
     id: classOne.id,
