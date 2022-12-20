@@ -2,6 +2,14 @@ import { GoogleMap,useJsApiLoader, MarkerF } from '@react-google-maps/api';
 import { useEffect ,useContext} from 'react';
 import { FgAtlasContexts } from "../../Contexts"
 
+interface room {
+  identification:string ,
+  level: number,
+  latitude:number,
+  longitude: number,
+  buildingName: string
+}
+
 const containerStyle = {
   width: '100vw',
   height: '100vh'
