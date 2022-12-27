@@ -11,7 +11,9 @@
       "get": {
         "summary": "Pegar todas as matérias",
         "description": "Rota responsável por pegar todas as matérias do banco de dados",
-        "tags": ["subject"],
+        "tags": [
+          "Subject"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -41,7 +43,9 @@
       "get": {
         "summary": "Pegar uma matéria em específico",
         "description": "Rota responsável por pegar uma matéria do banco de dados",
-        "tags": ["subject"],
+        "tags": [
+          "Subject"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -67,92 +71,330 @@
         }
       }
     },
-    "/class": {},
-    "/building": {},
-    "/rooms": {}
-  },
-  "components": {
-    "schemas": {
-      "Subject": {
-        "type": "object",
-        "properties": {
-          "codeId": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "Class": {
-            "type": "Class"
+    "/class": {
+      "get": {
+        "summary": "Pegar todas as turmas",
+        "description": "Rota responsável por pegar todas as turmas do banco de dados",
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              },
+              "examples": {
+                "Class": {
+                  "value": {
+                    "id": 1,
+                    "idClass": 1,
+                    "subjectCodeId": "FGA0003",
+                    "teacher": "EDSON ALVES DA COSTA JUNIOR",
+                    "room": 2,
+                    "timeAndDay": "46T23"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a turma"
+                }
+              }
+            }
           }
         }
-      },
-      "Building": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "latitude": {
-            "type": "number"
-          },
-          "longitude": {
-            "type": "number"
-          },
-          "rooms": {
-            "type": "Room"
+      }
+    },
+    "/class/{idClass}": {
+      "get": {
+        "summary": "Pegar uma turma em específico",
+        "description": "Rota responsável por pegar uma turma em específico do banco de dados",
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              },
+              "examples": {
+                "Class": {
+                  "value": {
+                    "id": 1,
+                    "idClass": 1,
+                    "subjectCodeId": "FGA0003",
+                    "teacher": "EDSON ALVES DA COSTA JUNIOR",
+                    "room": 2,
+                    "timeAndDay": "46T23"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a turma"
+                }
+              }
+            }
           }
         }
-      },
-      "Room": {
-        "type": "object",
-        "properties": {
-          "identification": {
-            "type": "string"
-          },
-          "level": {
-            "type": "number"
-          },
-          "latitude": {
-            "type": "number"
-          },
-          "longitude": {
-            "type": "number"
-          },
-          "building": {
-            "type": "Building"
-          },
-          "buildingName": {
-            "type": "string"
-          },
-          "class": {
-            "type": "Class"
+      }
+    },
+    "/class/subject/{subjectCodeId}": {
+      "get": {
+        "summary": "Pegar todas as turmas de uma matéria específica",
+        "description": "Rota responsável por pegar uma turma de uma matéria específica do banco de dados",
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              },
+              "examples": {
+                "Class": {
+                  "value": {
+                    "id": 1,
+                    "idClass": 1,
+                    "subjectCodeId": "FGA0003",
+                    "teacher": "EDSON ALVES DA COSTA JUNIOR",
+                    "room": 2,
+                    "timeAndDay": "46T23"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a turma"
+                }
+              }
+            }
           }
         }
-      },
-      "Class": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "idClass": {
-            "type": "number"
-          },
-          "timeAndDay": {
-            "type": "string"
-          },
-          "teacher": {
-            "type": "string"
-          },
-          "subject": {
-            "type": "Subject"
-          },
-          "subjectCodeId": {
-            "type": "string"
-          },
-          "room": {
-            "type": "Room"
+      }
+    },
+    "/building": {
+      "get": {
+        "summary": "Pegar todos os prédios",
+        "description": "Rota responsável por pegar todos os prédios do banco de dados",
+        "tags": [
+          "Building"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Building"
+              },
+              "examples": {
+                "Building": {
+                  "value": {
+                    "name": "RU",
+                    "latitude": "-15.98956996870734",
+                    "longitude": "-48.0442005874793",
+                    "rooms": "0"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar o prédio"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/building/{name}": {
+      "get": {
+        "summary": "Pegar um prédio em específico",
+        "description": "Rota responsável por pegar um prédio em específico",
+        "tags": [
+          "Building"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Building"
+              },
+              "examples": {
+                "Building": {
+                  "value": {
+                    "name": "RU",
+                    "latitude": "-15.98956996870734",
+                    "longitude": "-48.0442005874793",
+                    "rooms": 0
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar o prédio"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rooms": {
+      "get": {
+        "summary": "Pegar todas as salas",
+        "description": "Rota responsável por pegar todas as salas do banco de dados",
+        "tags": [
+          "Room"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Room"
+              },
+              "examples": {
+                "Room": {
+                  "value": {
+                    "buildingName": "UAC",
+                    "latitude": "-15.989186",
+                    "longitude": "-48.044865",
+                    "class": 13,
+                    "level": 1,
+                    "identification": "ANFITEATRO"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a sala"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/room/{identification}": {
+      "get": {
+        "summary": "Pegar uma sala em específico",
+        "description": "Rota responsável por pegar uma sala do banco de dados",
+        "tags": [
+          "Room"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Room"
+              },
+              "examples": {
+                "Room": {
+                  "value": {
+                    "buildingName": "UAC",
+                    "latitude": "-15.989186",
+                    "longitude": "-48.044865",
+                    "class": 13,
+                    "level": 1,
+                    "identification": "ANFITEATRO"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a sala"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Subject": {
+          "type": "object",
+          "properties": {
+            "codeId": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "Class": {
+              "type": "Class"
+            }
+          }
+        },
+        "Building": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "rooms": {
+              "type": "Room"
+            }
+          }
+        },
+        "Room": {
+          "type": "object",
+          "properties": {
+            "identification": {
+              "type": "string"
+            },
+            "level": {
+              "type": "number"
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "building": {
+              "type": "Building"
+            },
+            "buildingName": {
+              "type": "string"
+            },
+            "class": {
+              "type": "Class"
+            }
+          }
+        },
+        "Class": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "idClass": {
+              "type": "number"
+            },
+            "timeAndDay": {
+              "type": "string"
+            },
+            "teacher": {
+              "type": "string"
+            },
+            "subject": {
+              "type": "Subject"
+            },
+            "subjectCodeId": {
+              "type": "string"
+            },
+            "room": {
+              "type": "Room"
+            }
           }
         }
       }
