@@ -57,3 +57,7 @@ async function scrap() {
 scrap()
   .then(() => console.log("Processo Finalizado!"))
   .catch(console.error);
+
+export default {
+  scrap
+}
