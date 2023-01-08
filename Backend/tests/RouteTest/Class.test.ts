@@ -9,8 +9,7 @@ describe("Class Routes test", () => {
   });
 
   it("should list one class", async () => {
-    const firstId = await prisma.class.findMany({ select: { id: true } });
-    const response = await req(server).get(`/api/class/${firstId[0].id}`);
+    const response = await req(server).get("/api/class/1");
     expect(response.statusCode).toBe(200);
     expect(response.body.room).toBeTruthy();
     expect(response.body.day).toBeTruthy();
