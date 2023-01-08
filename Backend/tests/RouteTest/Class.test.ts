@@ -1,5 +1,6 @@
 import req from "supertest";
 import server from "../../src/server";
+import prisma from "../../src/prismaClient";
 
 describe("Class Routes test", () => {
   it("should list all class", async () => {
@@ -8,7 +9,8 @@ describe("Class Routes test", () => {
   });
 
   it("should list one class", async () => {
-    const response = await req(server).get("/api/class/1");
+    const firstId = await prisma.class.findMany({ select: { id: true } });
+    const response = await req(server).get(`/api/class/${firstId[0].id}`);
     expect(response.statusCode).toBe(200);
     expect(response.body.room).toBeTruthy();
     expect(response.body.day).toBeTruthy();

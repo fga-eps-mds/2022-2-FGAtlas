@@ -1,12 +1,16 @@
 import puppeteer from "puppeteer";
 import generatePrisma from "./generatePrisma";
 
+/* eslint-disable*/
+/* istanbul ignore next */
 async function scrap() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 
   await page.goto("https://sigaa.unb.br/sigaa/public/turmas/listar.jsf");
   await page.select('select[id="formTurma:inputDepto"]', "673");
+  await page.$eval('input[id="formTurma:inputAno"]', (el: any) => (el.value = "2022"));
+  await page.select('select[id="formTurma:inputPeriodo"]', "2");
   await page.click('input[name="formTurma:j_id_jsp_1370969402_11"]');
 
   await page.waitForSelector("#turmasAbertas > table > tbody > tr.agrupador > td > a > span");
@@ -57,3 +61,5 @@ async function scrap() {
 scrap()
   .then(() => console.log("Processo Finalizado!"))
   .catch(console.error);
+
+export default scrap;
