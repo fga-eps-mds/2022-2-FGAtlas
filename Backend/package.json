@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npx prisma generate && prisma db seed && nodemon --watch \"src/\" --exec \"npm run lint:src && npx ts-node src/index.ts\" -e ts",
     "start:build": "node build/index.js",
+    "scrap": "dotenv -e env/.test.env npx ts-node src/scripts/scrapping.ts",
     "test": "npm run lint:tests && npm run migrate_reset_test && npx dotenv -e env/.test.env jest tests -- --runInBand",
     "docs": "node scripts/serveDocs.js",
     "ci": "npm run lint:tests && npm run migrate_ci && npx dotenv -e env/.ci.env jest",
@@ -47,7 +48,7 @@
     "pg-hstore": "^2.3.4",
     "prisma": "^4.4.0",
     "prisma-docs-generator": "^0.5.0",
-    "puppeteer": "^19.3.0",
+    "puppeteer": "^19.4.1",
     "swagger-ui-express": "^4.6.0",
     "uuid": "^9.0.0"
   },
@@ -73,8 +74,9 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "jest": "^29.1.1",
+    "jest": "^29.3.1",
     "jest-environment-node": "^29.1.1",
+    "jest-puppeteer": "^6.2.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",

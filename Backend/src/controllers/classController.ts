@@ -19,10 +19,6 @@ const readOneClass: RequestHandler = async (req, res) => {
     },
   });
 
-  if (classOne.length === 0) {
-    throw new HttpError.NotFound();
-  }
-
   const newClass = {
     id: classOne[0].id,
     idClass: classOne[0].idClass,

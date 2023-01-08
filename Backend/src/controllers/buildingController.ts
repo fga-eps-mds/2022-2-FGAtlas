@@ -11,7 +11,10 @@ const readBuildings: RequestHandler = async (req, res) => {
 
 const readOneBuilding: RequestHandler = async (req, res) => {
   const { name } = req.params;
-  const building = await prisma.building.findMany({ where: { name } });
+  const building = await prisma.building.findMany({
+    where: { name },
+    select: { name: true, latitude: true, longitude: true, rooms: true },
+  });
   if (building.length === 0) {
     throw new HttpError.NotFound();
   }
