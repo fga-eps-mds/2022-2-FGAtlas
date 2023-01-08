@@ -1,6 +1,5 @@
 import req from "supertest";
 import server from "../../src/server";
-import prisma from "../../src/prismaClient";
 
 describe("Class Routes test", () => {
   it("should list all class", async () => {
