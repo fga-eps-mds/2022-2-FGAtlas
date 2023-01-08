@@ -11,7 +11,9 @@
       "get": {
         "summary": "Pegar todas as matérias",
         "description": "Rota responsável por pegar todas as matérias do banco de dados",
-        "tags": ["subject"],
+        "tags": [
+          "Subject"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -19,7 +21,7 @@
                 "$ref": "#/components/schemas/Subject"
               },
               "examples": {
-                "Subject": {
+                "subject": {
                   "value": {
                     "codeId": "FGA0003",
                     "name": "Compiladores",
@@ -30,6 +32,12 @@
               "responses": {
                 "200": {
                   "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a subject"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
                 }
               }
             }
@@ -41,7 +49,9 @@
       "get": {
         "summary": "Pegar uma matéria em específico",
         "description": "Rota responsável por pegar uma matéria do banco de dados",
-        "tags": ["subject"],
+        "tags": [
+          "Subject"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -60,6 +70,12 @@
               "responses": {
                 "200": {
                   "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a subject"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
                 }
               }
             }
@@ -67,9 +83,290 @@
         }
       }
     },
-    "/class": {},
-    "/building": {},
-    "/rooms": {}
+    "/class": {
+      "get": {
+        "summary": "Pegar todas as turmas",
+        "description": "Rota responsável por pegar todas as turmas do banco de dados",
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              },
+              "examples": {
+                "Class": {
+                  "value": {
+                    "id": 1,
+                    "idClass": 1,
+                    "subjectCodeId": "FGA0003",
+                    "teacher": "EDSON ALVES DA COSTA JUNIOR",
+                    "room": 2,
+                    "timeAndDay": "46T23"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a turma"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/class/{idClass}": {
+      "get": {
+        "summary": "Pegar uma turma em específico",
+        "description": "Rota responsável por pegar uma turma em específico do banco de dados",
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              },
+              "examples": {
+                "Class": {
+                  "value": {
+                    "id": 1,
+                    "idClass": 1,
+                    "subjectCodeId": "FGA0003",
+                    "teacher": "EDSON ALVES DA COSTA JUNIOR",
+                    "room": 2,
+                    "timeAndDay": "46T23"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a turma"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/class/subject/{subjectCodeId}": {
+      "get": {
+        "summary": "Pegar todas as turmas de uma matéria específica",
+        "description": "Rota responsável por pegar uma turma de uma matéria específica do banco de dados",
+        "tags": [
+          "Class"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Class"
+              },
+              "examples": {
+                "Class": {
+                  "value": {
+                    "id": 1,
+                    "idClass": 1,
+                    "subjectCodeId": "FGA0003",
+                    "teacher": "EDSON ALVES DA COSTA JUNIOR",
+                    "room": 2,
+                    "timeAndDay": "46T23"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a turma"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/building": {
+      "get": {
+        "summary": "Pegar todos os prédios",
+        "description": "Rota responsável por pegar todos os prédios do banco de dados",
+        "tags": [
+          "Building"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Building"
+              },
+              "examples": {
+                "Building": {
+                  "value": {
+                    "name": "RU",
+                    "latitude": "-15.98956996870734",
+                    "longitude": "-48.0442005874793",
+                    "rooms": "0"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar o prédio"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/building/{name}": {
+      "get": {
+        "summary": "Pegar um prédio em específico",
+        "description": "Rota responsável por pegar um prédio em específico",
+        "tags": [
+          "Building"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Building"
+              },
+              "examples": {
+                "Building": {
+                  "value": {
+                    "name": "RU",
+                    "latitude": "-15.98956996870734",
+                    "longitude": "-48.0442005874793",
+                    "rooms": 0
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar o prédio"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rooms": {
+      "get": {
+        "summary": "Pegar todas as salas",
+        "description": "Rota responsável por pegar todas as salas do banco de dados",
+        "tags": [
+          "Room"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Room"
+              },
+              "examples": {
+                "Room": {
+                  "value": {
+                    "buildingName": "UAC",
+                    "latitude": "-15.989186",
+                    "longitude": "-48.044865",
+                    "class": 13,
+                    "level": 1,
+                    "identification": "ANFITEATRO"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a sala"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/room/{identification}": {
+      "get": {
+        "summary": "Pegar uma sala em específico",
+        "description": "Rota responsável por pegar uma sala do banco de dados",
+        "tags": [
+          "Room"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Room"
+              },
+              "examples": {
+                "Room": {
+                  "value": {
+                    "buildingName": "UAC",
+                    "latitude": "-15.989186",
+                    "longitude": "-48.044865",
+                    "class": 13,
+                    "level": 1,
+                    "identification": "ANFITEATRO"
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Extraido com sucesso, pode retornar um array vazio caso não encontrar a sala"
+                },
+                "404": {
+                  "description": "Array vazio ou não encontrado"
+                },
+                "400": {
+                  "description": "Bad request"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
   },
   "components": {
     "schemas": {

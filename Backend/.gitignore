@@ -35,6 +35,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+env/.ci.dev
+env/.dev.env
+env/.test.env
+.vscode/
 
 # Typescript v1 declaration files
 typings/

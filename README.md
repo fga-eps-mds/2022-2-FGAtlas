@@ -53,9 +53,24 @@
 <!-- ABOUT THE PROJECT -->
 ## :earth_americas: Sobre o projeto
 
-FGAtlas é um projeto web que fornece a localização dos prédios e salas da FGA, a fim de auxiliar calouros e veteranos a encontrarem os locais onde terão suas aulas. A ideia surgiu após a equipe realizar, em grupos da faculdade, uma pesquisa via forms na qual questionava os estudantes qual era a maior dificuldade dos mesmos no campus, a grande parte das respostas foram direcionadas à questões envolvendo localização. 
+FGAtlas é um projeto web que fornece a localização dos prédios e salas da FGA, a fim de auxiliar calouros e veteranos a encontrarem os locais onde terão suas aulas. A ideia surgiu após a equipe realizar, em grupos da faculdade, uma pesquisa via forms na qual questionava os estudantes qual era a maior dificuldade dos mesmos no campus, a grande parte das respostas foram direcionadas à questões envolvendo localização. Segue algumas telas da aplicação:
 
-<p align="right">(<a href="#readme-top">Voltar</a>)</p>
+<!-- PROJECT PRINTS -->
+<br />
+<div align="center">
+  <a href="https://github.com">
+    <img src="Docs/Prints_FGAtlas/Print_Home.png" alt="Print1" width="410" height="310">
+  </a>
+  <a href="https://github.com">
+    <img src="Docs/Prints_FGAtlas/Print_sobre_nos.png" alt="Print1" width="410" height="310">
+  </a>
+  <a href="https://github.com">
+    <img src="Docs/Prints_FGAtlas/Print_seleção_de_turmas.png" alt="Print1" width="410" height="310">
+  </a>
+  <a href="https://github.com">
+    <img src="Docs/Prints_FGAtlas/Print_mapa_FGA.png" alt="Print1" width="410" height="310">
+  </a>
+ </div>
 
 ## :hammer: Tecnologias
 
@@ -66,14 +81,23 @@ Tecnologias utilizadas neste repositório:
 <!-- GETTING STARTED -->
 ## :exclamation: Pré-requisitos
 
-Antes de começar, você precisa ter instalado as seguintes ferramentas: Postgres14, NodeJs e git.
+Antes de começar, você precisa ter instalado as seguintes ferramentas: 
+- [Postgres14](https://www.postgresql.org/download/);
+- [NodeJs 16.17.0](https://nodejs.org/en/blog/release/v16.16.0/);
+- [git](https://git-scm.com/download/win).
 
 ## :chart_with_upwards_trend: Como rodar
 
 Para executar o backend:
 1.	Clone o repositório
+```
+git clone https://github.com/fga-eps-mds/2022-2-FGAtlas.git
+```
 	
 2. 	Inicie o Postgres com o nome do banco de desenvolvimento
+```
+createdb FGAtlas_dev
+```
 
 3. 	Instale todas as dependências do repositório com:
 ```
@@ -94,8 +118,14 @@ npm run start
 
 Para executar o frontend:
 1. Clone o repositório
+```
+git clone https://github.com/fga-eps-mds/2022-2-FGAtlas.git
+```
 
 2. Vá para a pasta do vite
+```
+cd ./vite-project
+```
 
 3. Instale todas as dependências com:
 ```
@@ -110,7 +140,13 @@ npm run dev
 
 Para executar os testes do backend:
 1. 	Clone o repositório
+```
+git clone https://github.com/fga-eps-mds/2022-2-FGAtlas.git
+```
 2. 	Inicie o Postgres com o nome do banco de desenvolvimento
+```
+createdb FGAtlas_dev
+```
 
 3. 	Instale todas as dependências do repositório com:
 ```
@@ -118,16 +154,24 @@ npm install
 ```
 4. 	Inicie os testes com:
 ```
-npm run tests
+npm run test
 ```
 
 ## :orange_book: Backlog do produto
-<div align="center">
-  <a href="https://github.com">
-    <img src="Docs/BackLog - FGAtlas.png" alt="Logo" width="750" height="500">
-  </a>
-</div>
 
+Para visualizar o BackLog do produto, acesse: [BackLog](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/Docs/BackLog%20-%20FGAtlas.png)
+
+<!--WHERE WE CONTRIBUT-->
+## :heart: Comunidade
+
+Para conseguir desenvolver o projeto FGAtlas de maneira produtiva e dinâmica utilizamos o [Whatsapp](https://chat.whatsapp.com/CPuI4yEmlGc8696iUD4hgA) para uma comunicação mais rápida e para realizar as reuniões, como 
+dailys e reuniões semanais, e definição de Sprints e Issues utilizamos o [Discord](https://discord.gg/Txkht4J7). Além disso, para organização do código e comentar detalhes importantes utilizamos as próprias Issues. Para uma melhor organização das issues e para uma metrificação mais detalhada das contribuições utilizamos o [ZenHub](https://app.zenhub.com/workspaces/fgatlhas-638138d3a6b09c276ce2f78c/board?invite=LZvdxJcbarJnV5o7BLmqCN8D). 
+
+<!-- CONTRIBUTING -->
+## :question: Como contribuir 
+
+Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
+se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
 
 ## :smile: Desenvolvedores
 
@@ -181,23 +225,7 @@ npm run tests
 </center>
 
 ### Autoavaliação do grupo
-Seguimos a sequência, nota em que se auto-atribui e nota do grupo.
-
-	Carla Clementino – 7.5 / 9.5 
-	Debora Caires - 6 / 8
-	João – 3 / 5.3	
-	Kaua – 10 / 10
-	Paulo – 5 / 7.5
-	Rafa – 9 / 8.6
-	Sabrina – 5.5 / 6.1
-
-
-
-<!-- CONTRIBUTING -->
-## :question: Como contribuir 
-
-Para contribuir com o projeto leia o [Guia de Contribuição](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CONTRIBUTING.md) e para saber como
-se deve comportar para um bom andamento do projeto, leia nosso [Código de Conduta](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/CODE_OF_CONDUCT.md)
+Foi feita uma [autoavalição dos membros](https://github.com/fga-eps-mds/2022-2-FGAtlas/blob/main/Docs/Autoavalia%C3%A7%C3%A3o_dos_membros.md) em relação a contribuição com o projeto 
 
 ## &#128511; Autores
 
