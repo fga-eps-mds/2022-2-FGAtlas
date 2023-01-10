@@ -8,6 +8,11 @@ describe("Scrap behaviors", () => {
     await prisma.room.deleteMany();
     await prisma.subject.deleteMany();
 
+    await prisma.$executeRaw`TRUNCATE TABLE "Class" RESTART IDENTITY CASCADE`;
+    await prisma.$executeRaw`TRUNCATE TABLE "Room" RESTART IDENTITY CASCADE`;
+    await prisma.$executeRaw`TRUNCATE TABLE "Subject" RESTART IDENTITY CASCADE`;
+    await prisma.$executeRaw`TRUNCATE TABLE "Building" RESTART IDENTITY CASCADE`;
+
     await scrap();
 
     expect(await prisma.building.count()).toBeGreaterThan(0);
